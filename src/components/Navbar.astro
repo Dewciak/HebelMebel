@@ -1,0 +1,33 @@
+---
+import Logo from "./Logo.astro";
+import { RxHamburgerMenu as Hamburger } from "react-icons/rx";
+
+
+---
+
+<ul class="py-4 mx-auto items-center justify-center space-x-16 text-[1.4rem] hidden md:flex">
+    <li><a>Galeria</a></li>
+    <li><a>O Nas</a></li>
+    <li><a><Logo/></a></li>
+    <li><a>Meble</a></li>
+    <li><a>Kontakt</a></li>
+    
+</ul>
+<div class="flex justify-between mr-10">
+    <Logo/>
+    <Hamburger size={33}/> 
+</div>
+
+<ul class="mt-auto flex items-center justify-center flex-col">
+    <li><a>Galeria</a></li>
+    <li><a>O Nas</a></li>
+    <li><a>Meble</a></li>
+    <li><a>Kontakt</a></li>
+</ul>
+<style>
+    a{
+        cursor: pointer;
+    }
+</style>
+
+
