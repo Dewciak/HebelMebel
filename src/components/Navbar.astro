@@ -1,11 +1,10 @@
 ---
 import Logo from "./Logo.astro";
-import { RxHamburgerMenu as Hamburger } from "react-icons/rx";
-
-
+import HamburgerMenu from "./HamburgerMenu"
+import MobileMenu from "./MobileMenu"
 ---
 
-<ul class="py-4 mx-auto items-center justify-center space-x-16 text-[1.4rem] hidden md:flex">
+<ul class="py-4 mx-auto items-center justify-center space-x-16 text-[1.4rem] hidden xl:flex">
     <li><a>Galeria</a></li>
     <li><a>O Nas</a></li>
     <li><a><Logo/></a></li>
@@ -13,21 +12,23 @@ import { RxHamburgerMenu as Hamburger } from "react-icons/rx";
     <li><a>Kontakt</a></li>
     
 </ul>
-<div class="flex justify-between mr-10">
-    <Logo/>
-    <Hamburger size={33}/> 
+<div class="flex flex-col  xl:hidden mt-6">
+    <div class="flex justify-between items-center px-6">
+        <div class="hidden lg:block"></div>
+        <Logo/>
+        <HamburgerMenu client:load/>
+    </div>
+
+    <MobileMenu client:load/>
+    
 </div>
 
-<ul class="mt-auto flex items-center justify-center flex-col">
-    <li><a>Galeria</a></li>
-    <li><a>O Nas</a></li>
-    <li><a>Meble</a></li>
-    <li><a>Kontakt</a></li>
-</ul>
 <style>
     a{
         cursor: pointer;
+        text-align: left;
     }
+    
 </style>
 
 

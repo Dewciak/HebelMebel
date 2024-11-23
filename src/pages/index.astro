@@ -1,18 +1,30 @@
 ---
 import Hero from "../components/HomePage/Hero.astro";
+import Realizations from "../components/HomePage/Realizations.astro";
+import WriteUs from "../components/HomePage/WriteUs.astro";
 import Navbar from "../components/Navbar.astro";
 
-
 ---
-<head>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
-</head>
-<body>
-	<Navbar/>
-	<!-- <Hero/> -->
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8">
 
-</body>
-
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="favicon.png" type="image/png">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
+	</head>
+	<body>
+		<header>
+			<Navbar client:load/>
+		</header>
+		<main class="pb-32">
+			<Hero/>
+			<Realizations/>
+			<WriteUs/>
+		</main>
+	</body>
+</html>
 <style is:global>
 	html{
 		scroll-behavior: smooth;
