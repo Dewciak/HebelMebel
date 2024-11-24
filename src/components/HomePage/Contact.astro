@@ -1,0 +1,44 @@
+---
+import { SlSocialFacebook } from "react-icons/sl";
+import { GoMail } from "react-icons/go";
+import { LuPhone } from "react-icons/lu";
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+
+import WriteButton from "../WriteButton";
+---
+<div class="flex flex-col md:flex-row max-w-[900px] mx-auto mt-36">
+    <div class="flex-col">
+        <div>
+            <h1 class="text-xl">Napisz do nas</h1>
+            <h2 class="text-MyLightGray my-2">Odpowiemy ci najszybciej jak to możliwe!</h2>
+            <h1>hebelmebel@vp.pl</h1>
+        </div>
+        <div class="mt-6">
+            <h1 class="text-xl">Zadzwoń</h1>
+            <h2 class="text-MyLightGray my-2">A wspólnie omówimy szczegóły</h2>
+            <h1>789 483 925</h1>
+        </div>
+       
+       <div class="mt-8 flex  space-x-5">
+            <SlSocialFacebook size={30}/>
+            <GoMail size={30}/>
+            <LuPhone size={30} />
+       </div>
+    </div>
+    <div class="flex flex-col ml-auto w-[400px]">
+        <div class="flex space-x-4 items-center justify-center">
+            <div>
+                <h1 class="mb-2 text-lg">Email</h1>  
+                <Input type="email" placeholder="Twójemail@gmail.com" className="w-[250px]" />
+            </div>
+            <div class="mt-6">
+                <WriteButton textColor="black"/>
+            </div>
+        </div>
+        <h1 class="mt-4 mb-2 text-lg">Wiadomość</h1>
+        <Textarea placeholder="Zapytaj mnie o produkt jaki cie interesuje" className="h-[200px] items-start text-start"/>
+    </div>
+</div>
+
+

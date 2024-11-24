@@ -1,5 +1,5 @@
 import React from "react";
-import {isMobileMenuOpen} from "./mobileStore";
+import {isMobileMenuOpen} from "./StateStore";
 import {useStore} from "@nanostores/react";
 
 const MobileMenu = () => {

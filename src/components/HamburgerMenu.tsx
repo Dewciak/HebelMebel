@@ -1,6 +1,6 @@
 import React from "react";
 // import {RxHamburgerMenu as Hamburger} from "react-icons/rx";
-import {isMobileMenuOpen} from "./mobileStore";
+import {isMobileMenuOpen} from "./StateStore";
 import {useStore} from "@nanostores/react";
 import {Squash as Hamburger} from "hamburger-react";
 const HamburgerMenu = () => {
