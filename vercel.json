@@ -8,5 +8,12 @@
   "outputDirectory": "dist",
   "env": {
     "NODE_ENV": "production"
-  }
+  },
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/:match*",
+      "destination": "/dist/:match*"
+    }
+  ]
 }
