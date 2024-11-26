@@ -1,10 +1,11 @@
-import { N as NOOP_MIDDLEWARE_HEADER, D as DEFAULT_404_COMPONENT } from './astro/server_DyzOI-FT.mjs';
+import { N as NOOP_MIDDLEWARE_HEADER, D as DEFAULT_404_COMPONENT } from './astro/server_B-4JLGML.mjs';
 import { parse } from 'devalue';
 import { escape } from 'html-escaper';
 
-const NOOP_MIDDLEWARE_FN = (ctx, next) => {
-  ctx.request.headers.set(NOOP_MIDDLEWARE_HEADER, "true");
-  return next();
+const NOOP_MIDDLEWARE_FN = async (_ctx, next) => {
+  const response = await next();
+  response.headers.set(NOOP_MIDDLEWARE_HEADER, "true");
+  return response;
 };
 
 const ACTION_QUERY_PARAMS = {

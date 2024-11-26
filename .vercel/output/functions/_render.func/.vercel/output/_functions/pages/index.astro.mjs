@@ -1,5 +1,5 @@
 /* empty css                                 */
-import { c as createComponent, r as renderTemplate, m as maybeRenderHead, a as renderComponent, b as createAstro, e as renderHead } from '../chunks/astro/server_DyzOI-FT.mjs';
+import { c as createComponent, r as renderTemplate, m as maybeRenderHead, a as renderComponent, b as createAstro, e as renderHead } from '../chunks/astro/server_B-4JLGML.mjs';
 import 'kleur/colors';
 import { jsx, jsxs } from 'react/jsx-runtime';
 import * as React from 'react';
@@ -7,7 +7,7 @@ import * as DialogPrimitive from '@radix-ui/react-dialog';
 import { X } from 'lucide-react';
 import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
-import { $ as $$Image } from '../chunks/_astro_assets_C_WDHnnx.mjs';
+import { $ as $$Image } from '../chunks/_astro_assets_DDeiRkJs.mjs';
 import { atom } from 'nanostores';
 import { useStore } from '@nanostores/react';
 import { Squash } from 'hamburger-react';
