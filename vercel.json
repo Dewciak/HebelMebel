@@ -1,0 +1,12 @@
+{
+  "builds": [
+    {
+      "src": "astro.config.mjs",
+      "use": "@astro/build"
+    }
+  ],
+  "outputDirectory": "dist",
+  "env": {
+    "NODE_ENV": "production"
+  }
+}
