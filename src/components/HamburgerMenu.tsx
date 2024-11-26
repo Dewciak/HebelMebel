@@ -6,7 +6,12 @@ import {Squash as Hamburger} from "hamburger-react";
 const HamburgerMenu = () => {
   const $isMobileMenuOpen = useStore(isMobileMenuOpen);
   return (
-    <button className='hamburgerMenu z-10' onClick={() => isMobileMenuOpen.set(!$isMobileMenuOpen)}>
+    <button
+      className='hamburgerMenu z-10'
+      onClick={() => {
+        isMobileMenuOpen.set(!$isMobileMenuOpen);
+      }}
+    >
       <Hamburger size={40} />
     </button>
   );

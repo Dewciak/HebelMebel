@@ -5,10 +5,10 @@ interface Props {
 }
 const WriteButton = ({textColor}: Props) => {
   return (
-    <button className='z-10'>
+    <button className='z-10 mr-5'>
       <div className='hover:scale-110 duration-300 w-[142px] h-[52px] border-2 rounded-[10px] border-MyBrown '>
         <div
-          className={`hover:scale-105 w-[142px] h-[52px] flex items-center justify-center text-${textColor} rounded-[10px] border-2 border-MyBrown relative top-[5px] left-[5px]`}
+          className={`hover:scale-105 w-[142px] h-[52px] flex items-center justify-center text-${textColor} rounded-[10px] border-2 border-MyBrown mt-[5px] ml-[5px]`}
         >
           <h1 className='relative bottom-1 right-1'>Napisz</h1>
         </div>

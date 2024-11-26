@@ -8,11 +8,11 @@ const MobileMenu = () => {
   const selected = 0;
   return (
     <div
-      className={`absolute w-[60%] h-screen ml-auto bg-white flex justify-center items-center transition-transform ${$isMobileMenuOpen ? "translate-x-[0px]" : "translate-x-[60rem]"} duration-500   mt-[-11vh]`}
+      className={`absolute w-[60%] h-screen ml-auto bg-white flex justify-center items-center transition-transform ${$isMobileMenuOpen ? "translate-x-[0px]" : "translate-x-[-20rem]"} duration-500   mt-[-11vh]`}
     >
       <ul id='mobileMenu' className='space-y-6 text-2xl relative py-6 flex justify-center items-start flex-col w-full'>
         {sections.map((section, key) => (
-          <li key={key} className={` ${key === selected ? "bg-MyBrown" : ""} w-full py-2 px-2`}>
+          <li key={key} className={` ${key === selected ? "bg-MyBrown" : ""} w-full py-2 px-10`}>
             <a>{section}</a>
           </li>
         ))}

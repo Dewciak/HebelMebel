@@ -7,8 +7,8 @@ import { Textarea } from "@/components/ui/textarea"
 
 import WriteButton from "../WriteButton";
 ---
-<div class="flex flex-col md:flex-row max-w-[900px] mx-auto mt-36">
-    <div class="flex-col">
+<div class="flex flex-col md:flex-row md:max-w-[900px] mx-auto md:mt-36 mt-24 max-w-[90%] ">
+    <div class="flex-row mt-0 md:mt-0">
         <div>
             <h1 class="text-xl">Napisz do nas</h1>
             <h2 class="text-MyLightGray my-2">Odpowiemy ci najszybciej jak to możliwe!</h2>
@@ -20,17 +20,17 @@ import WriteButton from "../WriteButton";
             <h1>789 483 925</h1>
         </div>
        
-       <div class="mt-8 flex  space-x-5">
+       <div class="mt-8 space-x-5 hidden md:flex">
             <SlSocialFacebook size={30}/>
             <GoMail size={30}/>
             <LuPhone size={30} />
        </div>
     </div>
-    <div class="flex flex-col ml-auto w-[400px]">
-        <div class="flex space-x-4 items-center justify-center">
+    <div class="flex flex-col md:ml-auto w-[400px] mt-10 md:mt-0">
+        <div class="flex space-x-4 items-center  justify-between  ">
             <div>
                 <h1 class="mb-2 text-lg">Email</h1>  
-                <Input type="email" placeholder="Twójemail@gmail.com" className="w-[250px]" />
+                <Input type="email" placeholder="Twójemail@gmail.com" className="md:w-[250px]" />
             </div>
             <div class="mt-6">
                 <WriteButton textColor="black"/>
