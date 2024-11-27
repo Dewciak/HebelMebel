@@ -2,17 +2,18 @@
 import Logo from "./Logo.astro";
 import HamburgerMenu from "./HamburgerMenu"
 import MobileMenu from "./MobileMenu"
+import Dropdown from '../components/ui/Dropdown'
 ---
 
 <ul class=" py-4 mx-auto items-center justify-center space-x-16 text-[1.4rem] hidden xl:flex">
-    <li><a>Galeria</a></li>
+    <li><a href="/tables">Galeria</a></li>
     <li><a>O Nas</a></li>
     <li><a><Logo/></a></li>
-    <li><a>Meble</a></li>
+    <li><Dropdown/ client:load></li>
     <li><a>Kontakt</a></li>
     
 </ul>
-<div class="flex flex-col  xl:hidden mt-6 overflow-hidden">
+<div class="fixed w-full top-0 left-0 py-3 flex flex-col  xl:hidden z-20 bg-white overflow-hidden">
     <div class="flex justify-between items-center px-6">
         <div class="hidden lg:block"></div>
         <Logo/>

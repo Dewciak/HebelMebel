@@ -1,0 +1,35 @@
+
+---
+import Footer from '@/components/Footer.astro'
+import Navbar from '@/components/Navbar.astro'
+
+interface Props{
+    title: string;
+    description: string;
+    background: ImageMetadata;
+    styles: string[];
+    items: {
+        itemStyle: string,
+        itemPhotoUrl: string
+    }[]
+}
+const {title,description,background,styles,items} = Astro.props
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{title}</title>
+  </head>
+  <body>
+    <nav>
+      <Navbar/>
+    </nav>
+    <main>
+
+    </main>
+    <Footer />
+  </body>
+ 
+</html>

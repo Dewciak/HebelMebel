@@ -5,14 +5,15 @@ import {useStore} from "@nanostores/react";
 import {Squash as Hamburger} from "hamburger-react";
 const HamburgerMenu = () => {
   const $isMobileMenuOpen = useStore(isMobileMenuOpen);
+
   return (
     <button
-      className='hamburgerMenu z-10'
+      className='hamburgerMenu z-30'
       onClick={() => {
         isMobileMenuOpen.set(!$isMobileMenuOpen);
       }}
     >
-      <Hamburger size={40} />
+      <Hamburger size={40} duration={0.3} />
     </button>
   );
 };

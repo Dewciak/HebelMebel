@@ -1,0 +1,16 @@
+---
+import Furnitures from '@/layouts/Furnitures.astro';
+import Bg from '../../src/images/furnitureBg.png'
+
+const title = "Stoły";
+const description = "Stoły";
+const background = Bg;
+const styles = ["Modern", "Loft", "Industrialny", "Skandynawski"];
+const items = [{
+    itemStyle: "Loft",
+    itemPhotoUrl: "alejaja"
+}];
+---
+
+
+<Furnitures title={title} description={description} background={background} styles={styles} items={items}>

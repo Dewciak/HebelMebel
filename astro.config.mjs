@@ -11,4 +11,15 @@ import vercel from "@astrojs/vercel/serverless";
 export default defineConfig({
   integrations: [tailwind(), react()],
   output: "static",
+  vite: {
+    optimizeDeps: {
+      include: ["@material-tailwind/react"], // Optymalizacja zależności
+    },
+    build: {
+      target: "esnext", // Ustawienie celu na ESNext
+      commonjsOptions: {
+        include: [/node_modules/], // Włącz wsparcie dla CommonJS
+      },
+    },
+  },
 });

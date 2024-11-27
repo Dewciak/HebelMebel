@@ -10,7 +10,8 @@ import Furnitures from "../components/HomePage/Furnitures.astro";
 import Stages from "../components/HomePage/Stages.astro";
 import WoodTypes from "../components/HomePage/WoodTypes";
 import Contact from "../components/HomePage/Contact.astro";
-import Footer from "../components/HomePage/Footer.astro";
+import Footer from "../components/Footer.astro";
+
 ---
 <!DOCTYPE html>
 <html lang="pl">
@@ -44,6 +45,11 @@ import Footer from "../components/HomePage/Footer.astro";
 
 	html{
 		scroll-behavior: smooth;
+	}
+	scroll-hidden{
+		overflow: hidden;
+  		height: 100vh;
+		background-color: red;
 	}
 	body {
     font-family: 'Roboto', sans-serif;
