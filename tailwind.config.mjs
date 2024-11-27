@@ -1,15 +1,11 @@
-// tailwind.config.js
-const withMT = require("@material-tailwind/react/utils/withMT");
-
-module.exports = withMT({
+/** @type {import('tailwindcss').Config} */
+export default {
   darkMode: ["class"],
-  content: [
-    "./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}",
-    "./node_modules/@material-tailwind/react/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
       colors: {
+        // MyBrown: "#B99470",
         MyBrown: "#C2A182",
         MyGray: "#A7A3A3",
         MyLightGray: "#0000005a",
@@ -62,4 +58,4 @@ module.exports = withMT({
     },
   },
   plugins: [require("tailwindcss-animate")],
-});
+};
