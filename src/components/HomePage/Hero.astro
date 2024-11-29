@@ -1,14 +1,32 @@
+---
+import { Image } from "astro:assets"
+import Bg from "../../images/Hero.png"
 
-<div class="bg mx-auto w-[95%] h-[680px] flex items-center justify-center mt-[0rem] md:mt-[-2.6rem] md:rounded-[30px]">
-    <h1 class="text-[5rem] text-white font-extralight text-center md:text-left">Hebel Mebel</h1>
+---
+<div class="grid grid-cols-2 bg-[#fafafac1] items-center">
+    <div class="flex flex-col justify-center items-center">
+        <div class="flex flex-col ">
+            <h2 class="text-2xl text-[#C2A182] tracking-widest">STOLARSTWO</h2>
+            <h1 class="py-6 text-7xl">Hebel Mebel</h1>
+            <p class="text-MyGray">
+                Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, <br/>
+                consectetur, adipisci velit..."
+                "There is no one who loves pain itself, <br/> who seeks after it
+            </p>
+        </div>
+        
+    </div>
+        <Image src={Bg} alt="Main bg" class="ml-auto object-cover h-[700px]"></Image>
+
+
 </div>
 <style>
-    .bg{
+    /* .bg{
         background-image: url(../../images/Hero.png);
         background-size:cover;
         background-position: center;
         background-repeat: no-repeat;
-    }
+    } */
     
 </style>
 

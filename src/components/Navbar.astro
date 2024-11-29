@@ -4,16 +4,26 @@ import HamburgerMenu from "./HamburgerMenu"
 import MobileMenu from "./MobileMenu"
 import Dropdown from '../components/ui/Dropdown'
 ---
+<div class="max-w-[2000px] mx-auto grid grid-cols-3  py-6 justify-center px-14 items-center text-MyGray hover:text-MyLightGray font-extralight">
+    <ul class="flex text-[1.4rem]  text-right space-x-14">
+        <li><a>GALERIA</a></li>
+        <li><a>O NAS</a></li>
+        <li><a>DREWNO</a></li>
+        <li><a>KONTAKT</a></li>
+    </ul>
+    <a><Logo/></a>
+    <ul class="flex text-[1.4rem]  text-left space-x-14">
+        <li><a>STOŁY</a></li>
+        <li><a>KOMODY</a></li>
+        <li><a>REGAŁY</a></li>
+        <li><a>SZAFKI</a></li>
+    </ul>
+</div>
 
-<ul class=" py-4 mx-auto items-center justify-center space-x-16 text-[1.4rem] hidden xl:flex">
-    <li><a href="/tables">Galeria</a></li>
-    <li><a>O Nas</a></li>
-    <li><a><Logo/></a></li>
-    <li><Dropdown/ client:load></li>
-    <li><a>Kontakt</a></li>
-    
-</ul>
-<div class="fixed w-full top-0 left-0 py-3 flex flex-col  xl:hidden z-20 bg-white overflow-hidden">
+
+
+
+<!-- <div class="fixed w-full top-0 left-0 py-3 flex flex-col  xl:hidden z-20 bg-white overflow-hidden">
     <div class="flex justify-between items-center px-6">
         <div class="hidden lg:block"></div>
         <Logo/>
@@ -22,14 +32,17 @@ import Dropdown from '../components/ui/Dropdown'
 
     <MobileMenu client:load/>
     
-</div>
+</div> -->
 
 <style>
     a{
         cursor: pointer;
-        text-align: left;
+    
+    }
+    li{
+        /* width: 100px; */
     }
     
-</style>
+</style> 
 
 
