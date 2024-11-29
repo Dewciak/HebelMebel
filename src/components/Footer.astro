@@ -1,26 +1,36 @@
 ---
 import Logo from "./Logo.astro";
----
+import WriteButton from "./WriteButton";
 
-<div class="max-w-[900px] mx-auto border-t-2 border-gray-200 flex flex-col px-4 pb-4 mt-16">
-    <div class="flex justify-between items-center mt-6">
-       <div class="flex items-center">
-        <Logo/>
-        <div class="ml-4">
-            <h1 class="text-2xl">Hebel Mebel</h1>
-            <h2 class="text-MyBrown">Stolarstwo</h2>
+---
+<div class="bg-[#F6F6F6] mt-40">
+    <div class="max-w-[900px] py-20 flex justify-between items-center mx-auto">
+        <div class="text-5xl font-extralight">
+            <h1>Daj mi znać</h1>
+            <h1 class="mt-8">Jaki mebel cie interesuje</h1>
         </div>
-        
-       </div>
-        
-        <div class="flex space-x-2">
-            <h1>Masz pytania?</h1>
-            <h2 class="text-MyBrown border-b ">Napisz</h2>
-        </div>
-        
+        <WriteButton textColor="black"/>
     </div>
-    <div class="mt-6 flex justify-between">
-        <h1>© Hebel Mebel 2024</h1>
-        <h1>Realizacja: Wiktor Dawid</h1>
+    <div class="max-w-[900px] mx-auto border-t-2  border-gray-200 flex flex-col px-4 pb-8">
+        <div class="flex justify-between items-center mt-6">
+           <div class="flex items-center">
+            <Logo/>
+            <div class="ml-4">
+                <h1 class="text-2xl">Hebel Mebel</h1>
+                <h2 class="text-MyBrown">Stolarstwo</h2>
+            </div>
+            
+           </div>
+            
+            <div class="flex space-x-2">
+                <h1>Masz pytania?</h1>
+                <h2 class="text-MyBrown border-b ">Napisz</h2>
+            </div>
+            
+        </div>
+        <div class="mt-6 flex justify-between">
+            <h1>© Hebel Mebel 2024</h1>
+            <h1>Realizacja: Wiktor Dawid</h1>
+        </div>
     </div>
 </div>

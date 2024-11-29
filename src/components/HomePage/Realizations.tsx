@@ -1,15 +1,12 @@
 import {useState} from "react";
-import Realization1 from "../../images/Realization-1.jpg";
-import Realization2 from "../../images/Realization-2.jpg";
-import Realization3 from "../../images/Realization-3.webp";
 
-const realizations = ["src/images/Realization-1.jpg", "src/images/Realization-2.jpg", "src/images/Realization-3.webp"];
+const realizations = ["/images/Realization-1.jpg", "/images/Realization-2.jpg", "/images/Realization-3.webp"];
 
 const Realizations = () => {
   const [hoveredRealization, setHoveredRealization] = useState<number | null>(null);
 
   return (
-    <div className=' w-full'>
+    <div className='w-full'>
       <div className='text-center mt-28'>
         <h1 className='text-4xl font-extralight'>Nasze realizacje</h1>
       </div>
