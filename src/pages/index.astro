@@ -1,7 +1,7 @@
 ---
 import AboutUs from "../components/HomePage/AboutUs.astro";
 import Hero from "../components/HomePage/Hero.astro";
-import Realizations from "../components/HomePage/Realizations.astro";
+import Realizations from "../components/HomePage/Realizations.tsx";
 import WriteUs from "../components/HomePage/WriteUs.astro";
 import Navbar from "../components/Navbar.astro";
 import Quote from "../components/HomePage/Quote.astro"
@@ -30,13 +30,13 @@ import Footer from "../components/Footer.astro";
 		</header>
 		<main class="snap-y">
 			<Hero/>
-			<Realizations/>
+			<Realizations client:visible/>
 			<WriteUs/>
 			<AboutUs/>
 			<Quote/>
 			<Furnitures/>
 			<Stages/>
-			<WoodTypes client:load/>
+			<WoodTypes client:visible/>
 			<Contact/>
 			<Footer/>
 		</main>
