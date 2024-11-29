@@ -6,25 +6,25 @@ const WoodTypes = () => {
       name: "Dąb",
       description:
         "Jedno z najbardziej cenionych gatunków drewna, charakteryzujące się wysoką trwałością, eleganckim wyglądem oraz wyrazistym usłojeniem. Idealny wybór do produkcji mebli, łączący naturalne piękno z funkcjonalnością.",
-      img: "public/images/Oak.webp",
+      img: "/public/images/Oak.webp",
     },
     {
       name: "Jesion",
       description:
         "Jesion to twarde i elastyczne drewno o jasnej barwie i wyraźnym rysunku słojów. Jest cenione w produkcji mebli i elementów konstrukcyjnych ze względu na trwałość i łatwość obróbki.",
-      img: "public/images/Ash.jpg",
+      img: "/public/images/Ash.jpg",
     },
     {
       name: "Orzech",
       description:
         "Drewno orzechowe jest cenione za swoją twardość, gęstość i charakterystyczny, ciemnobrązowy kolor z wyraźnym usłojeniem. Jest popularne w produkcji mebli, rzeźbie oraz wykończeniu wnętrz, charakteryzując się eleganckim wyglądem i dużą odpornością na uszkodzenia.",
-      img: "public/images/Nut.jpg",
+      img: "/public/images/Nut.jpg",
     },
     {
       name: "Sosna",
       description:
         "Drewno sosnowe jest lekkie, elastyczne i łatwe do obróbki, co sprawia, że jest popularne w budownictwie i produkcji mebli. Charakteryzuje się jasną barwą i widocznymi słojami, a także ma przyjemny, naturalny zapach.",
-      img: "public/images/Pine.webp",
+      img: "/public/images/Pine.webp",
     },
   ];
 
