@@ -1,44 +1,44 @@
 ---
-import AboutUs from "../components/HomePage/AboutUs.astro";
+import Logo from "@/components/Logo.astro";
+import Footer from "../components/Footer.astro";
 import Hero from "../components/HomePage/Hero.astro";
 import Realizations from "../components/HomePage/Realizations.tsx";
 import WriteUs from "../components/HomePage/WriteUs.astro";
-import Navbar from "../components/Navbar.astro";
-import Quote from "../components/HomePage/Quote.astro"
-import '../styles/global.css'
+import AboutUs from "../components/HomePage/AboutUs.astro";
+import Quote from "../components/HomePage/Quote.astro";
 import Furnitures from "../components/HomePage/Furnitures.astro";
 import Stages from "../components/HomePage/Stages.astro";
-import WoodTypes from "../components/HomePage/WoodTypes";
-import Footer from "../components/Footer.astro";
+import WoodTypes from "@/components/HomePage/WoodTypes";
+import Navbar from "@/components/Navbar.astro";
 
 ---
+
 <!DOCTYPE html>
 <html lang="pl">
-	<head>
-		<meta charset="UTF-8">
-
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="icon" href="favicon.png" type="image/png">
-		<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;200;300;400;500;700&display=swap" rel="stylesheet" />
-		<!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap" rel="stylesheet" /> -->
-	</head>
-	<body class="">
-		<header>
-			<Navbar/>
-		</header>
-		<main class="snap-y">
-			<Hero/>
-			<Realizations client:visible/>
-			<WriteUs/>
-			<AboutUs/>
-			<Quote/>
-			<Furnitures/>
-			<WoodTypes client:visible/>
-			<Stages/>
-			<Footer/>
-		</main>
-	</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;200;300;400;500;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+		<Navbar client:load/>
+    </header>
+    <main class="snap-y">
+      <Hero />
+      <Realizations client:visible />
+      <WriteUs />
+	  <AboutUs />
+      <Quote />
+      <Furnitures />
+      <WoodTypes client:visible />
+      <Stages />
+      <Footer />
+    </main>
+  </body>
 </html>
+
 <style is:global>
 
 
@@ -48,7 +48,6 @@ import Footer from "../components/Footer.astro";
 	scroll-hidden{
 		overflow: hidden;
   		height: 100vh;
-		background-color: red;
 	}
 	body {
     font-family: 'Roboto', sans-serif;
