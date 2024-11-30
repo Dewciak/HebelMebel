@@ -4,7 +4,7 @@ import HamburgerMenu from "./HamburgerMenu";
 import MobileMenu from "./MobileMenu";
 ---
 
-<div class="w-full fixed bg-white">
+<div class="w-full fixed bg-white z-[100]">
   <div class="max-w-[2000px] mx-auto grid grid-cols-3 py-6 justify-center px-14 items-center text-MyGray hover:text-MyLightGray font-extralight">
     <ul class="flex text-[1.2rem] text-right space-x-14" id="navbar-links">
       <li>
@@ -20,7 +20,7 @@ import MobileMenu from "./MobileMenu";
         <a href="#Footer" class="navbar-link">KONTAKT</a>
       </li>
     </ul>
-    <a>
+    <a href="/">
       <Logo />
     </a>
     <ul class="flex text-[1.2rem] text-left space-x-14">
@@ -92,10 +92,12 @@ import MobileMenu from "./MobileMenu";
 
   .font-bold {
     font-weight: normal;
-    color: black;
+    color: #C2A182;
   }
 
   .navbar-link {
     transition: font-weight 0.2s ease;
+    z-index: 101;
   }
+  
 </style>

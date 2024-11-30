@@ -8,7 +8,7 @@ export default {
         // MyBrown: "#B99470",
         MyBrown: "#C2A182",
         MyGray: "#A7A3A3",
-        MyLightGray: "#0000005a",
+        MyLightGray: "#fafafac1",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {

@@ -1,7 +1,6 @@
-
 ---
-import Footer from '@/components/Footer.astro'
-import Navbar from '@/Navbar.astro'
+import Footer from "@/components/Footer.astro";
+import Navbar from "@/components/Navbar.astro";
 
 interface Props{
     title: string;
@@ -14,7 +13,11 @@ interface Props{
     }[]
 }
 const {title,description,background,styles,items} = Astro.props
+
+
 ---
+
+
 
 <html lang="en">
   <head>
@@ -29,7 +32,7 @@ const {title,description,background,styles,items} = Astro.props
     <main>
 
     </main>
-    <Footer />
+    <Footer/>
   </body>
  
 </html>
