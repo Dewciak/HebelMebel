@@ -11,7 +11,7 @@ const Realizations = () => {
         <div className='text-center mt-28'>
           <h1 className='text-4xl font-extralight'>Nasze realizacje</h1>
         </div>
-        <div className='mx-auto flex mt-20 overflow-hidden max-w-[1200px]'>
+        <div className='mx-auto flex mt-20 overflow-hidden max-w-[1200px]  justify-center items-center '>
           {realizations.map((realization, key) => (
             <img
               key={key}
@@ -19,7 +19,9 @@ const Realizations = () => {
               alt='Realization1 text'
               onMouseEnter={() => setHoveredRealization(key)}
               onMouseLeave={() => setHoveredRealization(null)}
-              className={`${hoveredRealization !== null && hoveredRealization === key ? "w-[600px]" : "w-[300px]"} ${hoveredRealization === null ? "w-[400px]" : ""} bg-gray-400 h-[800px] transition-all duration-300 object-cover`}
+              className={`${hoveredRealization !== null && hoveredRealization === key ? "md:w-[600px] w-[80%]" : "lg:w-[300px] w-[150px]"} 
+                ${hoveredRealization === null ? "w-[33%] lg:w-[400px]" : ""} 
+                bg-gray-400 md:h-[800px] h-[600px] transition-all duration-300 object-cover`}
             />
           ))}
         </div>

@@ -1,23 +1,24 @@
 ---
+
 import Footer from "@/components/Footer.astro";
 import Navbar from "@/components/Navbar.astro";
 
-interface Props{
+
+
+interface Props {
     title: string;
     description: string;
     background: ImageMetadata;
     styles: string[];
     items: {
-        itemStyle: string,
-        itemPhotoUrl: string
-    }[]
+        itemStyle: string;
+        itemPhotoUrl: string;
+    }[];
 }
-const {title,description,background,styles,items} = Astro.props
 
 
+const {title, description, background, styles, items} = Astro.props;
 ---
-
-
 
 <html lang="en">
   <head>
@@ -30,9 +31,19 @@ const {title,description,background,styles,items} = Astro.props
       <Navbar/>
     </nav>
     <main>
-
+     
+      <h1>{title}</h1>
+      <p>{description}</p>
+      <div class="background" style={{ backgroundImage: `url(${background.src})` }}>
+      </div>
+      <ul>
+        {items.map(item => (
+          <li class={item.itemStyle}>
+            <img src={item.itemPhotoUrl} alt={item.itemStyle} />
+          </li>
+        ))}
+      </ul>
     </main>
     <Footer/>
   </body>
- 
 </html>

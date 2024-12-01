@@ -17,7 +17,7 @@ const WoodTypes = () => {
     {
       name: "Orzech",
       description:
-        "Drewno orzechowe jest cenione za swoją twardość, gęstość i charakterystyczny, ciemnobrązowy kolor z wyraźnym usłojeniem. Jest popularne w produkcji mebli, rzeźbie oraz wykończeniu wnętrz, charakteryzując się eleganckim wyglądem i dużą odpornością na uszkodzenia.",
+        "Drewno orzechowe jest cenione za swoją twardość, gęstość i charakterystyczny, ciemnobrązowy kolor z wyraźnym usłojeniem. Jest popularne w produkcji mebli, rzeźbie oraz wykończeniu wnętrz, charakteryzując się eleganckim ",
       img: "/images/Nut.jpg",
     },
     {
@@ -34,14 +34,14 @@ const WoodTypes = () => {
     <div className='flex flex-col-reverse md:flex-row md:max-w-[900px] mx-auto md:mt-40 mt-28 px-3'>
       <div className='md:w-[50%] space-y-6 mt-16 flex items-center justify-center md:items-start md:justify-start flex-col'>
         <h1 className='text-5xl font-extralight'>{selectedWood.name}</h1>
-        <h2 className='text-MyLightGray px-4 md:px-0 h-[150px]'>{selectedWood.description}</h2>{" "}
+        <h2 className='text-MyGray px-4 md:px-0 h-[150px]'>{selectedWood.description}</h2>{" "}
         <div className='flex space-x-1'>
           {woods.map((wood, index) => (
             <Cube key={index} img={wood.img} setWood={() => setSelectedWood(wood)} />
           ))}
         </div>
       </div>
-      <div className='w-[400px] h-[400px] bg-gray-200 md:ml-auto rounded-[30px]'>
+      <div className='lg:w-[400px] lg:h-[400px] w-[300px] h-[300px] bg-gray-200 md:ml-auto rounded-[30px] mx-auto'>
         <img src={selectedWood.img} alt={selectedWood.name} className='w-full h-full object-cover rounded-[30px]' />
       </div>
     </div>

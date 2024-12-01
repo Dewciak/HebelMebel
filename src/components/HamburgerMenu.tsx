@@ -13,7 +13,7 @@ const HamburgerMenu = () => {
         isMobileMenuOpen.set(!$isMobileMenuOpen);
       }}
     >
-      <Hamburger size={40} duration={0.3} />
+      <Hamburger size={40} duration={0.3} toggled={$isMobileMenuOpen} />
     </button>
   );
 };

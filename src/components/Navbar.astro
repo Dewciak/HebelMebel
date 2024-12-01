@@ -2,30 +2,31 @@
 import Logo from "./Logo.astro";
 import HamburgerMenu from "./HamburgerMenu";
 import MobileMenu from "./MobileMenu";
+
 ---
 
-<div class="w-full fixed bg-white z-[100]">
-  <div class="max-w-[2000px] mx-auto grid grid-cols-3 py-6 justify-center px-14 items-center text-MyGray hover:text-MyLightGray font-extralight">
+<div class="w-full fixed bg-white z-[100] hidden xl:flex">
+  <div class=" max-w-[2000px] mx-auto grid grid-cols-3 py-6 justify-center px-14 items-center text-MyGray  font-extralight">
     <ul class="flex text-[1.2rem] text-right space-x-14" id="navbar-links">
       <li>
         <a href="#Realizations" class="navbar-link">REALIZACJE</a>
       </li>
       <li>
-        <a href="#AboutUs" class="navbar-link">O NAS</a>
+        <a href="#AboutUs" class="navbar-link">O&nbsp;NAS</a>
       </li>
       <li>
         <a href="#Furnitures" class="navbar-link">MEBLE</a>
       </li>
       <li>
-        <a href="#Footer" class="navbar-link">KONTAKT</a>
+        <a href="#Contact" class="navbar-link">KONTAKT</a>
       </li>
     </ul>
-    <a href="/">
+    <a href="/" class=" w-[5rem] mx-auto">
       <Logo />
     </a>
     <ul class="flex text-[1.2rem] text-left space-x-14">
       <li>
-        <a class="navbar-link">STOŁY</a>
+        <a href="/tables" class="navbar-link">STOŁY</a>
       </li>
       <li>
         <a class="navbar-link">KOMODY</a>
@@ -39,6 +40,15 @@ import MobileMenu from "./MobileMenu";
     </ul>
   </div>
 </div>
+
+
+<div class="fixed flex xl:hidden w-full bg-white justify-between px-6 py-1 z-30">
+  <a href="/"><Logo/></a>
+  <HamburgerMenu client:load/>
+</div>
+<MobileMenu client:load/>
+
+
 
 <script>
  document.addEventListener('DOMContentLoaded', () => {
@@ -88,8 +98,11 @@ import MobileMenu from "./MobileMenu";
 <style>
   a {
     cursor: pointer;
+    
   }
-
+  li:hover{
+    color: #C2A182;
+  }
   .font-bold {
     font-weight: normal;
     color: #C2A182;

@@ -15,7 +15,24 @@ export const MobileMenu = () => {
     }
   }, [$isMobileMenuOpen, blockScroll, allowScroll]);
 
-  const sections = ["Galeria", "O Nas", "Stoły", "Komody", "Regały", "Szafki", "Kontakt"];
+  const sections = [
+    {
+      name: "Galeria",
+      path: "/",
+    },
+    {
+      name: "O nas",
+      path: "/#AboutUs",
+    },
+    {
+      name: "Meble",
+      path: "/#Furnitures",
+    },
+    {
+      name: "Kontakt",
+      path: "/#Contact",
+    },
+  ];
   const selected = 0;
   return (
     <div
@@ -24,11 +41,13 @@ export const MobileMenu = () => {
       <div className='w-full flex items-center justify-center'>
         <ul
           id='mobileMenu'
-          className='space-y-6 text-2xl relative py-6 flex justify-center flex-col w-full items-start '
+          className='space-y-6 bg-white text-2xl relative py-6 flex justify-center flex-col w-full items-center text-center'
         >
           {sections.map((section, key) => (
-            <li key={key} className={` ${key === selected ? "bg-MyBrown" : ""} w-full py-2 px-10`}>
-              <a>{section}</a>
+            <li key={key} className='w-full py-2 px-10'>
+              <a href={section.path} onClick={() => isMobileMenuOpen.set(!$isMobileMenuOpen)}>
+                {section.name}
+              </a>
             </li>
           ))}
         </ul>
