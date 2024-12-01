@@ -3,16 +3,16 @@
   "builds": [
     {
       "src": "package.json",
-      "use": "@vercel/static-build",
+      "use": "@vercel/astro",
       "config": {
-        "distDir": "dist"
+        "output": "server"
       }
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/dist/$1"
+      "dest": "/$1"
     }
   ]
 }
