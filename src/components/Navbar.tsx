@@ -4,28 +4,38 @@ import MobileMenu from "./MobileMenu";
 import React from "react";
 
 const Navbar = () => {
+  const handleScroll = (targetId: string) => {
+    const element = document.getElementById(targetId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }
+  };
+
   return (
     <div>
       <div className='w-full fixed bg-white z-[100] hidden xl:flex'>
-        <div className=' max-w-[2000px] mx-auto grid grid-cols-3 py-6 justify-center px-14 items-center text-MyGray  font-extralight'>
+        <div className=' max-w-[2000px] mx-auto grid grid-cols-3 py-6 justify-center px-14 items-center text-MyGray font-extralight'>
           <ul className='flex text-[1.2rem] text-right space-x-14' id='navbar-links'>
             <li>
-              <a href='#Realizations' className='navbar-link'>
+              <a href='#' onClick={() => handleScroll("Realizations")} className='navbar-link'>
                 REALIZACJE
               </a>
             </li>
             <li>
-              <a href='#AboutUs' className='navbar-link'>
+              <a href='#' onClick={() => handleScroll("AboutUs")} className='navbar-link'>
                 O&nbsp;NAS
               </a>
             </li>
             <li>
-              <a href='#Furnitures' className='navbar-link'>
+              <a href='#' onClick={() => handleScroll("Furnitures")} className='navbar-link'>
                 MEBLE
               </a>
             </li>
             <li>
-              <a href='#Contact' className='navbar-link'>
+              <a href='#' onClick={() => handleScroll("Contact")} className='navbar-link'>
                 KONTAKT
               </a>
             </li>
@@ -62,70 +72,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-{
-  /* <script>
- document.addEventListener('DOMContentLoaded', () => {
-  const sections = document.querySelectorAll('section');
-  const navbarLinks = document.querySelectorAll('.navbar-link');
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      const id = entry.target.id;
-      const link = document.querySelector(`a[href="#${id}"]`);
-
-      if (entry.isIntersecting) {
-        link!.classList.add('font-bold');
-      } else {
-        link!.classList.remove('font-bold');
-      }
-    });
-  }, {
-    threshold: 0.9, 
-  });
-
-  sections.forEach((section) => {
-    observer.observe(section);
-  });
-
-  
-  navbarLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const targetId = link.getAttribute('href')?.substring(1); 
-      
-      if (targetId) {  
-        const targetSection = document.getElementById(targetId);
-        
-        if (targetSection) { 
-          targetSection.scrollIntoView({
-            behavior: 'smooth', 
-            block: 'center',    
-          });
-        }
-      }
-    });
-  });
-});
-</script>
-
-<style>
-  a {
-    cursor: pointer;
-    
-  }
-  li:hover{
-    color: #C2A182;
-  }
-  .font-bold {
-    font-weight: normal;
-    color: #C2A182;
-  }
-
-  .navbar-link {
-    transition: font-weight 0.2s ease;
-    z-index: 101;
-  }
-  
-</style> */
-}

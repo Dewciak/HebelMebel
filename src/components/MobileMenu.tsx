@@ -36,7 +36,7 @@ export const MobileMenu = () => {
   const selected = 0;
   return (
     <div
-      className={`fixed top-0 left-0 z-20 w-[100%] bg-white h-screen ml-auto  flex flex-col justify-center items-center transition-transform ${$isMobileMenuOpen ? "translate-x-[0%]" : "translate-x-[100%]"} duration-400`}
+      className={`fixed top-0 left-0 z-20 w-[100%] bg-white h-screen ml-auto  flex flex-col justify-center items-center transition-transform ${$isMobileMenuOpen ? "translate-x-[0%]" : "translate-x-[100%]"} duration-700`}
     >
       <div className='w-full flex items-center justify-center'>
         <ul
