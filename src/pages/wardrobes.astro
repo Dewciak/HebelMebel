@@ -1,0 +1,30 @@
+---
+import Furnitures from '@/layouts/Furnitures.astro';
+import Bg from '../../src/images/furnitureBg.png'
+
+const title = "Szafy";
+const description = "Szafy";
+const background = Bg;
+const styles = ["Modern", "Loft", "Industrialny", "Skandynawski"];
+const items = [{
+    itemStyle: "Loft",
+    itemPhotoUrl: "/images/table1.png"
+},{
+    itemStyle: "Modern",
+    itemPhotoUrl: "/images/table1.png"
+},{
+    itemStyle: "Skandynawski",
+    itemPhotoUrl: "/images/table1.png"
+},{
+    itemStyle: "Loft",
+    itemPhotoUrl: "/images/table1.png"
+},{
+    itemStyle: "Industrialny",
+    itemPhotoUrl: "/images/table1.png"
+}
+
+];
+---
+<!-- komody -->
+
+<Furnitures title={title} description={description} background={background} styles={styles} items={items}></Furnitures>

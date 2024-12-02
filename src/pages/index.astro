@@ -23,7 +23,7 @@ import Navbar from "@/components/Navbar.tsx";
   </head>
   <body>
     <header>
-		<Navbar client:load/>
+		<Navbar furniturePage={false} client:load/>
     </header>
     <main class="snap-y">
       <Hero />
@@ -41,7 +41,11 @@ import Navbar from "@/components/Navbar.tsx";
 
 <style is:global>
 
-
+  :root {
+    --myBrown: #C2A182;
+    --MyGray: #A7A3A3;
+    --MyLightGray: #fafafac1;
+  }
 	html{
 		scroll-behavior: smooth;
 	}
@@ -56,4 +60,7 @@ import Navbar from "@/components/Navbar.tsx";
 	button{
 		cursor: pointer;
 	}
+  li:hover{
+    color: var(--myBrown);
+  }
 </style>

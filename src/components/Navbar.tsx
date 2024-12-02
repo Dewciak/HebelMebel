@@ -3,7 +3,11 @@ import MobileMenu from "./MobileMenu";
 
 import React from "react";
 
-const Navbar = () => {
+interface Props {
+  furniturePage: boolean;
+}
+
+const Navbar = ({furniturePage}: Props) => {
   const handleScroll = (targetId: string) => {
     const element = document.getElementById(targetId);
     if (element) {
@@ -17,8 +21,13 @@ const Navbar = () => {
   return (
     <div>
       <div className='w-full fixed bg-white z-[100] hidden xl:flex'>
-        <div className=' max-w-[2000px] mx-auto grid grid-cols-3 py-6 justify-center px-14 items-center text-MyGray font-extralight'>
-          <ul className='flex text-[1.2rem] text-right space-x-14' id='navbar-links'>
+        <div
+          className={`max-w-[2000px] mx-auto  py-6 ${furniturePage === true ? "justify-between flex w-full" : "justify-center grid grid-cols-3"} px-14 items-center text-MyGray font-extralight`}
+        >
+          <ul
+            className={`flex text-[1.2rem] text-right space-x-14 ${furniturePage === true ? "hidden" : ""}`}
+            id='navbar-links'
+          >
             <li>
               <a href='#' onClick={() => handleScroll("Realizations")} className='navbar-link'>
                 REALIZACJE
@@ -40,7 +49,7 @@ const Navbar = () => {
               </a>
             </li>
           </ul>
-          <a href='/' className=' w-[5rem] mx-auto'>
+          <a href='/' className={`w-[5rem] ${furniturePage === true ? "" : "mx-auto"}`}>
             <img src='/images/Logo.png' className='size-[4.5rem]' />
           </a>
           <ul className='flex text-[1.2rem] text-left space-x-14'>
@@ -48,13 +57,13 @@ const Navbar = () => {
               <a href='/tables'>STOŁY</a>
             </li>
             <li>
-              <a>KOMODY</a>
+              <a href='/dressers'>KOMODY</a>
             </li>
             <li>
-              <a>REGAŁY</a>
+              <a href='/racks'>REGAŁY</a>
             </li>
             <li>
-              <a>SZAFKI</a>
+              <a href='/wardrobes'>SZAFY</a>
             </li>
           </ul>
         </div>

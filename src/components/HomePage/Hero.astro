@@ -4,21 +4,20 @@ import Bg from "../../images/Hero.png"
 import BgMobile from "../../images/HeroMobile.png"
 
 ---
-<div class="w-full bg-MyLightGray h-screen lg:h-auto z-0 pt-[125px]">
+<div class="w-full bg-MyLightGray h-screen lg:h-auto z-0 md:pt-[125px]">
     <div class="grid lg:grid-cols-2 bg-MyLightGray items-center max-w-[1500px] h-full mx-auto ">
         <div class="flex flex-col justify-center items-center  ">
-            <div class="flex flex-col z-10 justify-center items-center  h-[90%] w-full lg:h-auto lg:w-auto  px-6 lg:items-start ">
-                <h2 class="text-2xl  tracking-widest lg:text-MyBrown text-white leading-0">STOLARSTWO</h2>
-                <h1 class=" lg:text-7xl text-6xl text-white lg:text-black py-4 ">Hebel Mebel</h1>
-                <p class="lg:text-MyGray text-white ">
+            <Image src={BgMobile} alt="Main bg" class=" object-cover h-[450px] lg:hidden"/>
+
+            <div class=" mt-14 md:mt-0 flex flex-col z-10 justify-center items-center  h-[90%] w-full lg:h-auto lg:w-auto  px-6 lg:items-start ">
+                <h2 class="text-2xl  tracking-widest lg:text-MyBrown  leading-0">STOLARSTWO</h2>
+                <h1 class=" lg:text-7xl text-6xl  lg:text-black py-4 ">Hebel Mebel</h1>
+                <p class="lg:text-MyGray  ">
                     Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, <br/>
                     consectetur, adipisci velit..."
                     "There is no one who loves pain itself, <br/> who seeks after it
                 </p>
             </div>
-            <Image src={BgMobile} alt="Main bg" class="ml-auto object-cover h-[850px] absolute top-0 mt-[5vh] lg:hidden"/>
-
-            
         </div>
             <Image src={Bg} alt="Main bg" class="ml-auto object-cover h-[700px] hidden lg:flex"/>
     </div>
