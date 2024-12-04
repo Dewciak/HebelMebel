@@ -1,6 +1,6 @@
 import HamburgerMenu from "./HamburgerMenu";
 import MobileMenu from "./MobileMenu";
-
+import {Link} from "react-scroll";
 import React from "react";
 
 interface Props {
@@ -29,29 +29,29 @@ const Navbar = ({furniturePage}: Props) => {
             id='navbar-links'
           >
             <li>
-              <a href='#' onClick={() => handleScroll("Realizations")} className='navbar-link'>
+              <Link to='Realizations' className='cursor-pointer hover:text-MyBrown' offset={-window.innerHeight / 3}>
                 REALIZACJE
-              </a>
+              </Link>
             </li>
             <li>
-              <a href='#' onClick={() => handleScroll("AboutUs")} className='navbar-link'>
+              <Link to='AboutUs' className='cursor-pointer hover:text-MyBrown' offset={-window.innerHeight / 3}>
                 O&nbsp;NAS
-              </a>
+              </Link>
             </li>
             <li>
-              <a href='#' onClick={() => handleScroll("Furnitures")} className='navbar-link'>
+              <Link to='Furnitures' className='cursor-pointer hover:text-MyBrown' offset={-window.innerHeight / 3}>
                 MEBLE
-              </a>
+              </Link>
             </li>
             <li>
-              <a href='#' onClick={() => handleScroll("Contact")} className='navbar-link'>
+              <Link to='Contact' className='cursor-pointer hover:text-MyBrown' offset={-window.innerHeight / 3}>
                 KONTAKT
-              </a>
+              </Link>
             </li>
           </ul>
-          <a href='/' className={`w-[5rem] ${furniturePage === true ? "" : "mx-auto"}`}>
+          <Link to='/' className=' w-[4.5rem] mx-auto'>
             <img src='/images/Logo.png' className='size-[4.5rem]' />
-          </a>
+          </Link>
           <ul className='flex text-[1.2rem] text-left space-x-14'>
             <li>
               <a href='/tables'>STOŁY</a>

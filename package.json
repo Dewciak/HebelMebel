@@ -39,6 +39,7 @@
     "typescript": "^5.7.2"
   },
   "devDependencies": {
+    "@types/react-scroll": "^1.8.10",
     "prettier-plugin-astro": "^0.14.1"
   },
   "engines": {
