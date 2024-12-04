@@ -22,7 +22,7 @@ const Styles = ({styles}: Props) => {
                 if (selectedButtonId === key) setSelectedButtonId(undefined);
                 else setSelectedButtonId(key);
               }}
-              className={` px-4 py-2 border-[#00000076] rounded-full  ${selectedButtonId === key ? "border-2 font-medium text-black border-black" : "border text-[#00000076]"} duration-100 transition-all `}
+              className={` px-4 py-2 border-[#00000076] border-2 rounded-full  ${selectedButtonId === key ? "border-2 font-medium text-black border-black" : "border text-[#00000076]"} duration-100 transition-all `}
             >
               {style}
             </button>

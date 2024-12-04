@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {isMobileMenuOpen} from "./StateStore";
 import {useStore} from "@nanostores/react";
+import {Link} from "react-scroll";
 
 export const MobileMenu = () => {
   const $isMobileMenuOpen = useStore(isMobileMenuOpen);
@@ -18,19 +19,19 @@ export const MobileMenu = () => {
   const sections = [
     {
       name: "Galeria",
-      path: "/",
+      path: "Realizations",
     },
     {
       name: "O nas",
-      path: "/#AboutUs",
+      path: "AboutUs",
     },
     {
       name: "Meble",
-      path: "/#Furnitures",
+      path: "Furnitures",
     },
     {
       name: "Kontakt",
-      path: "/#Contact",
+      path: "Contact",
     },
   ];
   const selected = 0;
@@ -45,9 +46,9 @@ export const MobileMenu = () => {
         >
           {sections.map((section, key) => (
             <li key={key} className='w-full py-2 px-10'>
-              <a href={section.path} onClick={() => isMobileMenuOpen.set(!$isMobileMenuOpen)}>
+              <Link to={section.path} onClick={() => isMobileMenuOpen.set(!$isMobileMenuOpen)}>
                 {section.name}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

@@ -29,29 +29,29 @@ const Navbar = ({furniturePage}: Props) => {
             id='navbar-links'
           >
             <li>
-              <Link to='Realizations' className='cursor-pointer hover:text-MyBrown' offset={-window.innerHeight / 3}>
+              <Link to='Realizations' className='cursor-pointer hover:text-MyBrown'>
                 REALIZACJE
               </Link>
             </li>
             <li>
-              <Link to='AboutUs' className='cursor-pointer hover:text-MyBrown' offset={-window.innerHeight / 3}>
+              <Link to='AboutUs' className='cursor-pointer hover:text-MyBrown'>
                 O&nbsp;NAS
               </Link>
             </li>
             <li>
-              <Link to='Furnitures' className='cursor-pointer hover:text-MyBrown' offset={-window.innerHeight / 3}>
+              <Link to='Furnitures' className='cursor-pointer hover:text-MyBrown'>
                 MEBLE
               </Link>
             </li>
             <li>
-              <Link to='Contact' className='cursor-pointer hover:text-MyBrown' offset={-window.innerHeight / 3}>
+              <Link to='Contact' className='cursor-pointer hover:text-MyBrown'>
                 KONTAKT
               </Link>
             </li>
           </ul>
-          <Link to='/' className=' w-[4.5rem] mx-auto'>
+          <a href='/' className={`w-[4.5rem] ${furniturePage === false && "mx-auto"}`}>
             <img src='/images/Logo.png' className='size-[4.5rem]' />
-          </Link>
+          </a>
           <ul className='flex text-[1.2rem] text-left space-x-14'>
             <li>
               <a href='/tables'>STOŁY</a>
