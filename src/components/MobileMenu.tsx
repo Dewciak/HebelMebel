@@ -2,8 +2,15 @@ import React, {useEffect, useState} from "react";
 import {isMobileMenuOpen} from "./StateStore";
 import {useStore} from "@nanostores/react";
 import {Link} from "react-scroll";
+import {DarkModeSwitch} from "react-toggle-dark-mode";
 
-export const MobileMenu = () => {
+interface Props {
+  isDarkMode: boolean;
+  setDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
+  handleToggle: (checked: boolean) => void;
+}
+
+export const MobileMenu = ({isDarkMode, setDarkMode, handleToggle}: Props) => {
   const $isMobileMenuOpen = useStore(isMobileMenuOpen);
 
   const [blockScroll, allowScroll] = useScrollBlock();
@@ -37,12 +44,12 @@ export const MobileMenu = () => {
   const selected = 0;
   return (
     <div
-      className={`fixed top-0 left-0 z-20 w-[100%] bg-white h-screen ml-auto  flex flex-col justify-center items-center transition-transform ${$isMobileMenuOpen ? "translate-x-[0%]" : "translate-x-[100%]"} duration-700`}
+      className={`fixed top-0 left-0 z-20 w-[100%] bg-white dark:bg-MyDarkBg h-screen ml-auto  flex flex-col justify-center items-center transition-transform ${$isMobileMenuOpen ? "translate-x-[0%]" : "translate-x-[100%]"} duration-700`}
     >
       <div className='w-full flex items-center justify-center'>
         <ul
           id='mobileMenu'
-          className='space-y-6 bg-white text-2xl relative py-6 flex justify-center flex-col w-full items-center text-center'
+          className='space-y-6  dark:text-myDarkText text-2xl relative py-6 flex justify-center flex-col w-full items-center text-center'
         >
           {sections.map((section, key) => (
             <li key={key} className='w-full py-2 px-10'>
@@ -51,6 +58,16 @@ export const MobileMenu = () => {
               </Link>
             </li>
           ))}
+          <li>
+            <DarkModeSwitch
+              checked={isDarkMode}
+              style={{marginBottom: "0rem"}}
+              onChange={handleToggle}
+              moonColor='#000000'
+              sunColor='#ffffff'
+              size={30}
+            />
+          </li>
         </ul>
       </div>
     </div>

@@ -8,7 +8,7 @@ const HamburgerMenu = () => {
 
   return (
     <button
-      className='hamburgerMenu z-30'
+      className='hamburgerMenu z-30 '
       onClick={() => {
         isMobileMenuOpen.set(!$isMobileMenuOpen);
       }}

@@ -93,13 +93,18 @@ const Navbar = ({furniturePage}: Props) => {
         </div>
       </div>
 
-      <div className='fixed flex xl:hidden w-full bg-white justify-between px-6 py-1 z-30'>
+      <div className='fixed flex xl:hidden w-full bg-white dark:bg-myDarkLighterDark justify-between px-6 py-1 z-30'>
         <a href='/'>
-          <img src='/images/Logo.png' className='size-[4.5rem]' />
+          <a href='/'>
+            <img src='/images/Logo.png' className='size-[4.5rem] block dark:hidden' />
+          </a>
+          <a href='/'>
+            <img src='/LogoWhite.png' className='size-[4.5rem] hidden dark:block' />
+          </a>
         </a>
         <HamburgerMenu />
       </div>
-      <MobileMenu />
+      <MobileMenu isDarkMode={isDarkMode} setDarkMode={setDarkMode} handleToggle={handleToggle} />
     </div>
   );
 };
