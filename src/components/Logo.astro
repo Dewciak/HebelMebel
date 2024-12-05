@@ -1,6 +1,8 @@
 ---
 import { Image } from "astro:assets";
 import LogoPic from "../images/Logo.png"
+import LogoPicWhite from "../../public/LogoWhite.png"
 ---
 
-<Image src={LogoPic} alt="logo" class="md:mx-auto size-[4.5rem]"/>
+<Image src={LogoPic} alt="logo" class="md:mx-auto size-[4.5rem] block dark:hidden"/>
+<Image src={LogoPicWhite} alt="logo" class="md:mx-auto size-[4.5rem] hidden dark:block"/>

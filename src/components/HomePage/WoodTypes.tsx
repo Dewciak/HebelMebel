@@ -33,7 +33,7 @@ const WoodTypes = () => {
   return (
     <div className='flex flex-col-reverse md:flex-row md:max-w-[900px] mx-auto md:mt-40 mt-28 px-3'>
       <div className='md:w-[50%] space-y-6 mt-16 flex items-center justify-center md:items-start md:justify-start flex-col'>
-        <h1 className='text-5xl font-extralight'>{selectedWood.name}</h1>
+        <h1 className='text-5xl font-extralight dark:text-myDarkText'>{selectedWood.name}</h1>
         <h2 className='text-MyGray px-4 md:px-0 h-[150px]'>{selectedWood.description}</h2>{" "}
         <div className='flex space-x-1'>
           {woods.map((wood, index) => (
@@ -56,7 +56,7 @@ type CubeProps = {
 function Cube({img, setWood}: CubeProps) {
   return (
     <div
-      className='w-[80px] h-[80px] border-gray-100 border-2 flex items-center justify-center cursor-pointer'
+      className='w-[80px] h-[80px] border-gray-100 dark:border-[#e0e0e09a] border-2 flex items-center justify-center cursor-pointer'
       onMouseEnter={setWood}
       onClick={setWood}
     >

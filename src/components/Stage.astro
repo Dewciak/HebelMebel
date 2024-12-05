@@ -4,7 +4,7 @@ const {title,stage} = Astro.props;
 
 <div class="flex border-b-2 border-gray-200 pb-3 space-x-5 w-full">
     <h1>{stage}</h1>
-    <h2>{title}</h2>
+    <h2 class="dark:text-myDarkText text-[#0000008e] text-[1.5rem]">{title}</h2>
 </div>
 
 <style>
@@ -12,11 +12,6 @@ const {title,stage} = Astro.props;
         color: #B99470;
         
         font-size: 1.5rem;
-    }
-    
-    h2{
-        font-size: 1.5rem;
-        color: rgba(0, 0, 0, 0.558);
     }
    
 </style>

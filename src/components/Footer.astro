@@ -7,7 +7,7 @@ import OlxLogo from "../images/Olx.svg"
 
 ---
 <section id='Contact'>
-    <div class="bg-MyLightGray lg:mt-32 mt-20">
+    <div class="bg-MyLightGray dark:bg-myDarkLighterDark lg:mt-32 mt-20 dark:text-myDarkText">
         <div class="max-w-[900px] py-20 flex lg:justify-between items-center mx-auto flex-col justify-center lg:flex-row">
             <div class="text-5xl font-extralight  flex flex-col items-center justify-center md:items-start">
                 <h1 >Daj mi znać</h1>
@@ -19,6 +19,7 @@ import OlxLogo from "../images/Olx.svg"
             <div class="flex justify-between items-center mt-6 flex-row ">
                 <div class="flex items-center flex-col lg:flex-row">
                     <Logo/>
+
                     <div class="ml-4">
                         <h1 class="text-2xl">Hebel Mebel</h1>
                         <h2>Stolarstwo</h2>
@@ -35,7 +36,8 @@ import OlxLogo from "../images/Olx.svg"
                     </div>
                     
                     <div class="flex space-x-2 items-center justify-center">
-                        <img src="/Olx.svg" class="size-[30px] border border-black rounded-full px-1"/>
+                        <img src="/Olx.svg" class="size-[30px] border border-black rounded-full px-1 block dark:hidden"/>
+                        <img src="/OlxWhite.svg" class="size-[30px] border dark:border-myDarkText rounded-full px-1 hidden dark:block"/>
                         <h1>hebelmebel</h1>
                     </div>
                 </div>
