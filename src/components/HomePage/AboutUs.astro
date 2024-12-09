@@ -1,5 +1,6 @@
 ---
 import { AboutDialog } from "../AboutDialog"
+import {motion} from "framer-motion";
 ---
 <section id="AboutUs">
     <div   class="flex md:flex-row flex-col max-w-[800px] mx-auto justify-center items-center dark:text-white">
@@ -8,10 +9,51 @@ import { AboutDialog } from "../AboutDialog"
             <h1>lepiej!</h1>
             <div class="h-[2px] w-[100px] bg-MyBrown mt-4 rounded-xl"/>
         </div>
-        <div  class="md:w-[50%] w-[80%] flex flex-col justify-center items-center px-10 text-lg mt-0 md:mt-14 border-2 h-[400px] border-[#00000060] dark:border-myDarkText">
+        <div id="border" class="md:w-[50%] rounded-[6px] relative bg-white w-[80%] flex flex-col justify-center items-center px-10 text-lg mt-0 md:mt-14 h-[400px]  ">
             <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
                 "There is no one who  seeks after it and wants to have it, simply because it is pain...</p>
             <div class="mt-2"><AboutDialog client:visible/></div>
         </div>
     </div>
 </section>
+
+<style>
+    @property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+    #border::after, .card::before{
+    content: '';
+    position: absolute;
+    height: 102%;
+    width: 102%;
+    background-image: repeating-conic-gradient( from var(--angle),transparent 50%, #C2A182);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    animation: 7s spin linear infinite;
+    border-radius: 10px;
+    }
+    .border::before{
+    filter: blur(1.5rem);
+    opacity: 0.5;
+  }
+  @keyframes spin{
+    from{
+      --angle: 0deg;
+    }
+    to{
+      --angle: 360deg;
+    }
+  }
+</style>
+
+
+  
+  
+  
+  
+  

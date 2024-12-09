@@ -7,14 +7,24 @@ const HamburgerMenu = () => {
   const $isMobileMenuOpen = useStore(isMobileMenuOpen);
 
   return (
-    <button
-      className='hamburgerMenu z-30 '
-      onClick={() => {
-        isMobileMenuOpen.set(!$isMobileMenuOpen);
-      }}
-    >
-      <Hamburger size={40} duration={0.3} toggled={$isMobileMenuOpen} />
-    </button>
+    <div className='z-30  flex'>
+      <button
+        className='hamburgerMenu dark:hidden'
+        onClick={() => {
+          isMobileMenuOpen.set(!$isMobileMenuOpen);
+        }}
+      >
+        <Hamburger size={40} duration={0.3} toggled={$isMobileMenuOpen} />
+      </button>{" "}
+      <button
+        className='hamburgerMenu hidden dark:block'
+        onClick={() => {
+          isMobileMenuOpen.set(!$isMobileMenuOpen);
+        }}
+      >
+        <Hamburger size={40} duration={0.3} color='#ffffff' toggled={$isMobileMenuOpen} />
+      </button>
+    </div>
   );
 };
 

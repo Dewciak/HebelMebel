@@ -3,6 +3,8 @@ import MobileMenu from "./MobileMenu";
 import {Link} from "react-scroll";
 import React from "react";
 import {DarkModeSwitch} from "react-toggle-dark-mode";
+import {FaRegMoon} from "react-icons/fa";
+import {FiSun} from "react-icons/fi";
 
 interface Props {
   furniturePage: boolean;
@@ -10,9 +12,9 @@ interface Props {
 
 const Navbar = ({furniturePage}: Props) => {
   const [isDarkMode, setDarkMode] = React.useState(true);
-  const handleToggle = (checked: boolean) => {
+  const handleToggle = () => {
     document.documentElement.classList.toggle("dark");
-    setDarkMode(checked);
+    setDarkMode(!isDarkMode);
   };
 
   const handleScroll = (targetId: string) => {
@@ -29,11 +31,11 @@ const Navbar = ({furniturePage}: Props) => {
     <div>
       <div className='w-full fixed bg-white dark:bg-myDarkLighterDark z-[100] hidden xl:flex'>
         <div
-          className={`max-w-[2000px] mx-auto  py-6 ${furniturePage === true ? "justify-between flex w-full" : "justify-center grid grid-cols-3"} 
+          className={`max-w-[2000px] mx-auto  py-6 flex w-[90%]  justify-between  
             px-14 items-center text-MyGray font-extralight dark:text-white`}
         >
           <ul
-            className={`flex text-[1.2rem] text-right space-x-14 ${furniturePage === true ? "hidden" : ""}`}
+            className={`flex text-[1.2rem] w-[470px] justify-between ${furniturePage === true ? "hidden" : ""}`}
             id='navbar-links'
           >
             <li>
@@ -66,7 +68,7 @@ const Navbar = ({furniturePage}: Props) => {
             </a>
           </div>
 
-          <ul className='flex text-[1.2rem] text-left space-x-14 dark:text-white'>
+          <ul className='flex text-[1.2rem] text-left dark:text-white w-[470px] justify-between'>
             <li>
               <a href='/tables'>STOŁY</a>
             </li>
@@ -79,7 +81,8 @@ const Navbar = ({furniturePage}: Props) => {
             <li>
               <a href='/wardrobes'>SZAFY</a>
             </li>
-            <li>
+            {/* <li className='absolute right-5 top-[38px]'> */}
+            <li className='absolute right-11 top-11'>
               <DarkModeSwitch
                 checked={isDarkMode}
                 style={{marginBottom: "0rem"}}
@@ -88,6 +91,21 @@ const Navbar = ({furniturePage}: Props) => {
                 sunColor='#ffffff'
                 size={30}
               />
+              {/* <button
+                className='flex border-2 dark:border-white 
+                border-[#dedddd] rounded-[20px] p-0'
+                onClick={() => handleToggle()}
+              >
+                <div className='flex space-x-1 p-1 pr-2 py-2 items-center'>
+                  <div
+                    className={`absolute w-[30px] h-[30px] bg-[#dedddd] z-[-1] dark:bg-[#ffffff76] 
+                      rounded-full transition-transform duration-300 
+                      ${isDarkMode ? "translate-x-0" : "translate-x-[90%]"}`}
+                  />
+                  <FiSun size={22} color={isDarkMode ? "#ffffff" : "#ffffff9"} />
+                  <FaRegMoon size={22} color={isDarkMode ? "#00000020" : "#ffffff"} />
+                </div>
+              </button> */}
             </li>
           </ul>
         </div>
