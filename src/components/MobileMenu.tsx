@@ -58,14 +58,15 @@ export const MobileMenu = ({isDarkMode, setDarkMode, handleToggle}: Props) => {
             </li>
           ))}
           <li>
-            <DarkModeSwitch
+            {/* <DarkModeSwitch
               checked={isDarkMode}
               style={{marginBottom: "0rem"}}
               onChange={handleToggle}
               moonColor='#000000'
               sunColor='#ffffff'
               size={30}
-            />
+            /> */}
+            <DarkThemeToggle isDarkMode={isDarkMode} handleToggle={handleToggle} />
           </li>
         </ul>
       </div>
@@ -74,6 +75,7 @@ export const MobileMenu = ({isDarkMode, setDarkMode, handleToggle}: Props) => {
 };
 
 import {useRef} from "react";
+import DarkThemeToggle from "./DarkThemeToggle";
 
 export const useScrollBlock = () => {
   const scroll = useRef(false);
