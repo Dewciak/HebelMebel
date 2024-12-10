@@ -1,5 +1,4 @@
 import React from "react";
-import {MdZoomOutMap} from "react-icons/md";
 import ZoomSvg from "./ZoomSvg";
 import {selectedStyle} from "./StateStore";
 import {useStore} from "@nanostores/react";

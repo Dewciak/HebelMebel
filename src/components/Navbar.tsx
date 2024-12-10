@@ -1,7 +1,7 @@
 import HamburgerMenu from "./HamburgerMenu";
 import MobileMenu from "./MobileMenu";
 import {Link} from "react-scroll";
-import React from "react";
+import React, {useEffect} from "react";
 import {DarkModeSwitch} from "react-toggle-dark-mode";
 import {FaRegMoon} from "react-icons/fa";
 import {FiSun} from "react-icons/fi";
@@ -26,7 +26,16 @@ const Navbar = ({furniturePage}: Props) => {
       });
     }
   };
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     const logo = document.getElementById("logo");
+  //     if (logo) {
+  //       logo.classList.remove("mx-auto");
 
+  //       logo.classList.add("mr-auto");
+  //     }
+  //   }, 100);
+  // }, []);
   return (
     <div>
       <div className='w-full fixed bg-white dark:bg-myDarkLighterDark z-[100] hidden xl:flex'>
@@ -59,7 +68,7 @@ const Navbar = ({furniturePage}: Props) => {
               </Link>
             </li>
           </ul>
-          <div className={`w-[4.5rem] ${furniturePage === false && "mx-auto"}`}>
+          <div id='logo' className={`w-[4.5rem] duration-300 ${furniturePage === false && "mx-auto"}`}>
             <a href='/'>
               <img src='/images/Logo.png' className='size-[4.5rem] block dark:hidden' />
             </a>
@@ -81,17 +90,17 @@ const Navbar = ({furniturePage}: Props) => {
             <li>
               <a href='/wardrobes'>SZAFY</a>
             </li>
-            {/* <li className='absolute right-5 top-[38px]'> */}
-            <li className='absolute right-11 top-11'>
-              <DarkModeSwitch
+            <li className='absolute right-5 top-[42px]'>
+              {/* <li className='absolute right-11 top-11'> */}
+              {/* <DarkModeSwitch
                 checked={isDarkMode}
                 style={{marginBottom: "0rem"}}
                 onChange={handleToggle}
                 moonColor='#000000'
                 sunColor='#ffffff'
                 size={30}
-              />
-              {/* <button
+              /> */}
+              <button
                 className='flex border-2 dark:border-white 
                 border-[#dedddd] rounded-[20px] p-0'
                 onClick={() => handleToggle()}
@@ -105,7 +114,7 @@ const Navbar = ({furniturePage}: Props) => {
                   <FiSun size={22} color={isDarkMode ? "#ffffff" : "#ffffff9"} />
                   <FaRegMoon size={22} color={isDarkMode ? "#00000020" : "#ffffff"} />
                 </div>
-              </button> */}
+              </button>
             </li>
           </ul>
         </div>

@@ -5,7 +5,7 @@ interface Props {
   textColor: string;
 }
 
-const WriteButton = ({textColor}: Props) => {
+const WriteButton = () => {
   return (
     <motion.svg
       width='153'
@@ -29,9 +29,9 @@ const WriteButton = ({textColor}: Props) => {
         strokeDashoffset='400'
         animate={{strokeDashoffset: 0}}
         transition={{
-          duration: 1.5,
+          duration: 1.1,
           ease: "easeInOut",
-          delay: 0.5,
+          delay: 0,
         }}
       />
       <motion.rect
@@ -45,21 +45,12 @@ const WriteButton = ({textColor}: Props) => {
         strokeDashoffset='-400'
         animate={{strokeDashoffset: 0}}
         transition={{
-          duration: 1.5,
+          duration: 1.1,
           ease: "easeInOut",
-          delay: 1,
+          delay: 0.3,
         }}
       />
-      <motion.text
-        x='72.5'
-        y='32'
-        textAnchor='middle'
-        dominantBaseline='middle'
-        className='fill-black dark:fill-white'
-        initial={{opacity: 0}}
-        animate={{opacity: 1}}
-        transition={{delay: 2, duration: 0.5}}
-      >
+      <motion.text x='72.5' y='32' textAnchor='middle' dominantBaseline='middle' className='fill-black dark:fill-white'>
         Napisz
       </motion.text>
     </motion.svg>
