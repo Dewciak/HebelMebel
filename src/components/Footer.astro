@@ -4,22 +4,24 @@ import WriteButton from "./WriteButton";
 import { CiFacebook } from "react-icons/ci";
 import { PiPhoneThin } from "react-icons/pi";
 import OlxLogo from "../images/Olx.svg"
+import {ContactForm} from "./ContactForm"
+import Saw from "./Saw";
 
 ---
 <section id='Contact'>
     <div class="bg-MyLightGray dark:bg-myDarkLighterDark lg:mt-32 mt-20 dark:text-myDarkText">
-        <div class="max-w-[900px] py-20 flex lg:justify-between items-center mx-auto flex-col justify-center lg:flex-row">
+        <div class="max-w-[900px] py-12 flex lg:justify-between items-center mx-auto flex-col justify-center lg:flex-row">
             <div class="text-5xl font-extralight  flex flex-col items-center justify-center md:items-start">
-                <h1 >Daj mi znać</h1>
+                <h1 >Daj mi znać 
+                </h1>
                 <h1 class="mt-4  text-center md:text-left px-6 md:px-0 ">Jaki mebel cie interesuje</h1>
             </div>
-            <WriteButton client:visible>
+            <ContactForm client:visible/>
         </div>
         <div class="max-w-[900px] mx-auto border-t-2  border-gray-200 flex flex-col px-4 pb-8">
             <div class="flex justify-between items-center mt-6 flex-row ">
                 <div class="flex items-center flex-col lg:flex-row">
                     <Logo/>
-
                     <div class="ml-4">
                         <h1 class="text-2xl">Hebel Mebel</h1>
                         <h2>Stolarstwo</h2>

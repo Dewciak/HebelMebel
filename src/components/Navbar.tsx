@@ -120,13 +120,13 @@ const Navbar = ({furniturePage}: Props) => {
         </div>
       </div>
 
-      <div className='fixed flex xl:hidden w-full bg-white dark:bg-myDarkLighterDark justify-between px-6 py-1 z-30'>
+      <div className='fixed flex xl:hidden bg-white items-center w-full  dark:bg-myDarkLighterDark justify-between px-4 py-2 z-30'>
         <a href='/'>
           <a href='/'>
-            <img src='/images/Logo.png' className='size-[4.5rem] block dark:hidden' />
+            <img src='/images/Logo.png' className='size-[3.5rem] block dark:hidden' />
           </a>
           <a href='/'>
-            <img src='/LogoWhite.png' className='size-[4.5rem] hidden dark:block' />
+            <img src='/LogoWhite.png' className='size-[3.5rem] hidden dark:block' />
           </a>
         </a>
         <HamburgerMenu />

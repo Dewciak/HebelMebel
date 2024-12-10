@@ -5,7 +5,7 @@ interface Props {
   textColor: string;
 }
 
-const WriteButton = () => {
+const WriteButton = React.forwardRef<SVGSVGElement, React.ComponentProps<"svg">>(({className, ...props}, ref) => {
   return (
     <motion.svg
       width='153'
@@ -15,7 +15,7 @@ const WriteButton = () => {
       animate='visible'
       whileHover={{scale: 1.05}}
       whileTap={{scale: 0.95}}
-      className='outline-none'
+      className='outline-none z-10 mt-10'
     >
       <motion.rect
         className='stroke-[2px] stroke-linecap-round fill-transparent stroke-black dark:stroke-white'
@@ -55,6 +55,6 @@ const WriteButton = () => {
       </motion.text>
     </motion.svg>
   );
-};
+});
 
 export default WriteButton;

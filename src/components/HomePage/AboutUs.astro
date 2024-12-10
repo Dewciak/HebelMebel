@@ -34,14 +34,14 @@ import {motion} from "framer-motion";
     translate: -50% -50%;
     z-index: -1;
     padding: 3px;
-    animation: 7s spin linear infinite;
+    animation: 7s spinBorder linear infinite;
     border-radius: 10px;
     }
     .border::before{
     filter: blur(1.5rem);
     opacity: 0.5;
   }
-  @keyframes spin{
+  @keyframes spinBorder{
     from{
       --angle: 0deg;
     }

@@ -14,7 +14,7 @@ const HamburgerMenu = () => {
           isMobileMenuOpen.set(!$isMobileMenuOpen);
         }}
       >
-        <Hamburger size={40} duration={0.3} toggled={$isMobileMenuOpen} />
+        <Hamburger size={30} duration={0.3} toggled={$isMobileMenuOpen} />
       </button>{" "}
       <button
         className='hamburgerMenu hidden dark:block'
@@ -22,7 +22,7 @@ const HamburgerMenu = () => {
           isMobileMenuOpen.set(!$isMobileMenuOpen);
         }}
       >
-        <Hamburger size={40} duration={0.3} color='#ffffff' toggled={$isMobileMenuOpen} />
+        <Hamburger size={30} duration={0.3} color='#ffffff' toggled={$isMobileMenuOpen} />
       </button>
     </div>
   );
