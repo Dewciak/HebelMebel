@@ -12,6 +12,7 @@ export default {
         MyLightGray: "#fafafac1",
         MyDarkBg: "#212124",
         myDarkLighterDark: "#272727",
+        myDarkSemiGray: "#363636",
         myDarkText: "#ffffff",
         myDarkGray: "#e0e0e09a",
         background: "hsl(var(--background))",

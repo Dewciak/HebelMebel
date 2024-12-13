@@ -2,10 +2,11 @@
 import { Image } from "astro:assets"
 import WriteUsPic from "../../images/WriteUs.png"
 import WriteButton from "../WriteButton"
+import { ContactForm } from "../ContactForm"
 ---
 
-<div class="py-24 max-w-2xl justify-between mx-auto lg:flex-row  flex items-center flex-col px-4 ">
+<div class="py-20 max-w-2xl justify-between mx-auto lg:flex-row  flex items-center flex-col px-4 gap-y-10">
     <h1 class=" text-3xl  z-10 text-center text-black dark:text-myDarkText">Napisz po bezpłatną wycenę</h1>
-    <WriteButton client:visible/>
+    <ContactForm client:visible/>
 </div>
 

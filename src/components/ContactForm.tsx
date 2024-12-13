@@ -51,7 +51,7 @@ export function ContactForm() {
       <DialogTrigger>
         <WriteButton />
       </DialogTrigger>
-      <DialogContent className='sm:max-w-[425px]'>
+      <DialogContent className='sm:max-w-[425px] dark:bg-myDarkSemiGray'>
         <DialogHeader>
           <DialogTitle>Daj mi znać jaki mebel cie interesuje</DialogTitle>
           <DialogDescription>
@@ -82,7 +82,11 @@ export function ContactForm() {
           </div>
 
           <DialogFooter>
-            <Button type='submit' disabled={isDisabled} className='shadow-none border-2 border-black rounded-[8px]'>
+            <Button
+              type='submit'
+              disabled={isDisabled}
+              className='shadow-none border-2 border-black bg-transparent dark:text-white dark:border-white text-black hover:text-white rounded-[8px]'
+            >
               Wyślij
               {isDisabled && <Saw />}
             </Button>

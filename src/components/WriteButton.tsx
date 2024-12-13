@@ -15,7 +15,7 @@ const WriteButton = React.forwardRef<SVGSVGElement, React.ComponentProps<"svg">>
       animate='visible'
       whileHover={{scale: 1.05}}
       whileTap={{scale: 0.95}}
-      className='outline-none z-10 mt-10'
+      className='outline-none z-10 '
     >
       <motion.rect
         className='stroke-[2px] stroke-linecap-round fill-transparent stroke-black dark:stroke-white'
@@ -29,7 +29,7 @@ const WriteButton = React.forwardRef<SVGSVGElement, React.ComponentProps<"svg">>
         strokeDashoffset='400'
         animate={{strokeDashoffset: 0}}
         transition={{
-          duration: 1.1,
+          duration: 1.3,
           ease: "easeInOut",
           delay: 0,
         }}
@@ -42,12 +42,12 @@ const WriteButton = React.forwardRef<SVGSVGElement, React.ComponentProps<"svg">>
         x='1'
         y='1'
         strokeDasharray='400'
-        strokeDashoffset='-400'
+        strokeDashoffset='400'
         animate={{strokeDashoffset: 0}}
         transition={{
-          duration: 1.1,
+          duration: 1.3,
           ease: "easeInOut",
-          delay: 0.3,
+          delay: 0.5,
         }}
       />
       <motion.text x='72.5' y='32' textAnchor='middle' dominantBaseline='middle' className='fill-black dark:fill-white'>
