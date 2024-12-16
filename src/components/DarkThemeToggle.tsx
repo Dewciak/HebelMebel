@@ -18,11 +18,11 @@ const DarkThemeToggle = ({
       <div className='flex space-x-1 p-1 pr-2 py-2 items-center'>
         <div
           className={`absolute w-[30px] h-[30px] bg-[#dedddd] z-[-1] dark:bg-[#ffffff76] 
-        rounded-full transition-transform duration-300 
-        ${isDarkMode ? "translate-x-0" : "translate-x-[90%]"}`}
+        rounded-full transition-transform duration-100 
+        ${!isDarkMode ? "translate-x-0" : "translate-x-[90%]"}`}
         />
-        <FiSun size={22} color={isDarkMode ? "#ffffff" : "#ffffff9"} />
-        <FaRegMoon size={22} color={isDarkMode ? "#00000020" : "#ffffff"} />
+        <FiSun size={22} color={!isDarkMode ? "#ffffff" : "#ffffff9"} />
+        <FaRegMoon size={22} color={!isDarkMode ? "#00000020" : "#ffffff"} />
       </div>
     </button>
   );

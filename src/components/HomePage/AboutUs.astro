@@ -3,15 +3,15 @@ import { AboutDialog } from "../AboutDialog"
 import {motion} from "framer-motion";
 ---
 <section id="AboutUs">
-    <div   class="flex md:flex-row flex-col max-w-[900px] mx-auto justify-center items-center dark:text-white">
-        <div class="w-[400px] h-[400px]    shadow-md dark:shadow-MyBrown  flex flex-col items-center justify-center text-2xl font-normal ">
+    <div   class="flex lg:flex-row flex-col max-w-[900px] mx-auto justify-center items-center dark:text-white">
+        <div class="w-[350px] h-[350px]    shadow-lg dark:shadow-MyBrown  flex flex-col items-center justify-center text-2xl font-normal ">
             <h1 class="">Poznaj nas</h1>
             <h1 class="border-b-[2px] border-MyBrown pb-4">lepiej!</h1>
         </div>
         <div  class="  rounded-[6px]  
-          flex text-lg mt-0 md:mt-14   ">
+          flex text-lg mt-0 lg:mt-14   ">
             <div id="borderAnimation"/>
-            <div class="z-10 ml-1 mt-1 rounded-[10px] bg-white dark:bg-myDarkSemiGray w-[400px] h-[400px] flex items-center flex-col justify-center px-10">
+            <div class="z-10 ml-1 mt-1 rounded-[10px] bg-white dark:bg-myDarkSemiGray w-[350px] h-[350px] flex items-center flex-col justify-center px-10">
               <p >Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
                 "There is no one who  seeks after it and wants to have it, simply because it is pain...</p>
               <div class="mt-2"><AboutDialog client:visible/></div>
@@ -31,15 +31,15 @@ import {motion} from "framer-motion";
     #borderAnimation::after, #borderAnimation::before{
     content: '';
     position: absolute;
-    height: 410px;
-    width: 410px;
+    height: 360px;
+    width: 360px;
     /* top: 50%;
     left: 50%;
     transform: translateX(-50%,-50%); */
     background-image: repeating-conic-gradient( from var(--angle),transparent 50%, #C2A182);
     z-index: 0;
     animation: 7s spinBorder linear infinite;
-    border-radius: 10px;
+    border-radius: 15px;
     }
     #borderAnimation::before{
     filter: blur(1.5rem);

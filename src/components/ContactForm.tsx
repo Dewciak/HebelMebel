@@ -51,7 +51,7 @@ export function ContactForm() {
       <DialogTrigger>
         <WriteButton />
       </DialogTrigger>
-      <DialogContent className='sm:max-w-[425px] dark:bg-myDarkSemiGray'>
+      <DialogContent className='sm:max-w-[425px] dark:bg-myDarkSemiGray top-[35vh] md:top-[50%]'>
         <DialogHeader>
           <DialogTitle>Daj mi znać jaki mebel cie interesuje</DialogTitle>
           <DialogDescription>
@@ -77,7 +77,12 @@ export function ContactForm() {
               <Label htmlFor='message' className='text-right'>
                 Wiadomość
               </Label>
-              <Textarea name='message' required className='col-span-3'></Textarea>
+              <Textarea
+                name='message'
+                placeholder='Jaki jest czas oczekiwania dla stołu jadalnego?'
+                required
+                className='col-span-3'
+              ></Textarea>
             </div>
           </div>
 

@@ -29,3 +29,14 @@ const items = [{
 <!-- komody -->
 
 <Furnitures title={title} description={description} background={background} styles={styles} items={items}></Furnitures>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const savedDarkMode = localStorage.getItem("darkMode");
+
+    if (savedDarkMode === "true") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+});
+</script>

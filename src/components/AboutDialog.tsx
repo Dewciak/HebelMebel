@@ -14,12 +14,12 @@ export function AboutDialog() {
       <DialogTrigger asChild>
         <button className='text-MyBrown font-medium'>więcej</button>
       </DialogTrigger>
-      <DialogContent className='m:max-w-[600px]'>
+      <DialogContent className='m:max-w-[600px] dark:bg-myDarkSemiGray'>
         <DialogHeader>
           <DialogTitle>O nas</DialogTitle>
           <DialogDescription></DialogDescription>
         </DialogHeader>
-        <p className='text-justify'>
+        <p className='text-justify dark:text-white overflow-y-scroll h-[400px] px-4 '>
           Hebel Mebel to firma stolarska, która łączy tradycyjne rzemiosło z nowoczesnym designem. Od lat tworzymy
           wyjątkowe meble na wymiar, które łączą funkcjonalność, trwałość i estetykę. Nasza pasja do drewna i dbałość o
           detale sprawiają, że każdy projekt jest dopracowany w najmniejszym szczególe. Nasza misja to wnoszenie piękna

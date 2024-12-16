@@ -23,18 +23,18 @@ import Navbar from "@/components/Navbar.tsx";
   </head>
   <body>
     <header>
-		<Navbar furniturePage={false} client:load/>
+		<Navbar client:only="react" furniturePage={false} />
     </header>
     <main class="snap-y dark:bg-MyDarkBg ">
       <Hero />
-      <Realizations client:visible />
+      <Realizations client:visible  />
       <WriteUs />
 	  <AboutUs />
       <Quote />
       <Furnitures />
       <WoodTypes client:visible />
       <Stages />
-      <Footer />
+      <Footer client:visible/>
     </main>
   </body>
 </html>

@@ -18,7 +18,7 @@ const WriteButton = React.forwardRef<SVGSVGElement, React.ComponentProps<"svg">>
       className='outline-none z-10 '
     >
       <motion.rect
-        className='stroke-[2px] stroke-linecap-round fill-transparent stroke-black dark:stroke-white'
+        className='stroke stroke-[2px] stroke-linecap-round fill-transparent stroke-black dark:stroke-white'
         width='145'
         height='52'
         rx='10'

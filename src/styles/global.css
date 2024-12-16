@@ -82,3 +82,17 @@
     transform: rotate(360deg);
   }
 }
+
+#Furnitures::-webkit-scrollbar {
+  width: 10px;
+  height: 7px;
+}
+
+#Furnitures::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+#Furnitures::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}

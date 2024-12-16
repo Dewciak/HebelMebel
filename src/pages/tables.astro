@@ -22,9 +22,19 @@ const items = [{
     itemStyle: "Industrialny",
     itemPhotoUrl: "/images/table1.png"
 }
-
 ];
 ---
 
+<Furnitures title={title} description={description} background={background} styles={styles} items={items} />
 
-<Furnitures title={title} description={description} background={background} styles={styles} items={items}>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const savedDarkMode = localStorage.getItem("darkMode");
+
+    if (savedDarkMode === "true") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+});
+</script>
