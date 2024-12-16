@@ -1,7 +1,7 @@
 /* empty css                                    */
 import { c as createComponent, r as renderTemplate, m as maybeRenderHead, a as renderComponent, e as createAstro, b as renderHead } from '../chunks/astro/server_SVU_X31k.mjs';
 import 'kleur/colors';
-import { C as ContactForm, D as Dialog, a as DialogTrigger, b as DialogContent, c as DialogHeader, d as DialogTitle, e as DialogDescription, $ as $$Footer } from '../chunks/Footer_Bf9Hhksp.mjs';
+import { C as ContactForm, D as Dialog, a as DialogTrigger, b as DialogContent, c as DialogHeader, d as DialogTitle, e as DialogDescription, $ as $$Footer } from '../chunks/Footer_orouQQq_.mjs';
 import { $ as $$Image } from '../chunks/_astro_assets_Bsqnfyuo.mjs';
 import { jsx, jsxs } from 'react/jsx-runtime';
 import { useState } from 'react';

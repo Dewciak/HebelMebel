@@ -1,7 +1,7 @@
 /* empty css                                    */
 import { c as createComponent, r as renderTemplate, a as renderComponent } from '../chunks/astro/server_SVU_X31k.mjs';
 import 'kleur/colors';
-import { $ as $$Furnitures, B as Bg } from '../chunks/furnitureBg_DClIw9P2.mjs';
+import { $ as $$Furnitures, B as Bg } from '../chunks/furnitureBg_7AmNTwtj.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$Tables = createComponent(($$result, $$props, $$slots) => {

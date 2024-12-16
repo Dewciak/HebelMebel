@@ -1,6 +1,6 @@
 import { c as createComponent, r as renderTemplate, b as renderHead, a as renderComponent, e as createAstro } from './astro/server_SVU_X31k.mjs';
 import 'kleur/colors';
-import { $ as $$Footer } from './Footer_Bf9Hhksp.mjs';
+import { $ as $$Footer } from './Footer_orouQQq_.mjs';
 import { jsx, jsxs } from 'react/jsx-runtime';
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-scroll';
