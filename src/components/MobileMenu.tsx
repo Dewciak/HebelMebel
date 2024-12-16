@@ -1,8 +1,7 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
 import {isMobileMenuOpen} from "./StateStore";
 import {useStore} from "@nanostores/react";
 import {Link} from "react-scroll";
-import {DarkModeSwitch} from "react-toggle-dark-mode";
 
 interface Props {
   isDarkMode: boolean;
@@ -58,14 +57,6 @@ export const MobileMenu = ({isDarkMode, setDarkMode, handleToggle}: Props) => {
             </li>
           ))}
           <li>
-            {/* <DarkModeSwitch
-              checked={isDarkMode}
-              style={{marginBottom: "0rem"}}
-              onChange={handleToggle}
-              moonColor='#000000'
-              sunColor='#ffffff'
-              size={30}
-            /> */}
             <DarkThemeToggle isDarkMode={isDarkMode} handleToggle={handleToggle} />
           </li>
         </ul>
