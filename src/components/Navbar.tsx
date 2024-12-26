@@ -49,17 +49,17 @@ const Navbar = ({furniturePage}: Props) => {
             id='navbar-links'
           >
             <li>
-              <Link to='Realizations' className='cursor-pointer hover:text-MyBrown'>
+              <Link to='Realizations' className='cursor-pointer hover:text-MyBrown' offset={-200}>
                 REALIZACJE
               </Link>
             </li>
             <li>
-              <Link to='AboutUs' className='cursor-pointer hover:text-MyBrown'>
+              <Link to='AboutUs' className='cursor-pointer hover:text-MyBrown' offset={-400}>
                 O&nbsp;NAS
               </Link>
             </li>
             <li>
-              <Link to='Furnitures' className='cursor-pointer hover:text-MyBrown'>
+              <Link to='Furnitures' className='cursor-pointer hover:text-MyBrown' offset={-400}>
                 MEBLE
               </Link>
             </li>

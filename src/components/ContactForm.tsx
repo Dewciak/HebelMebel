@@ -86,7 +86,14 @@ export function ContactForm() {
             </div>
           </div>
 
-          <DialogFooter>
+          <DialogFooter className='flex'>
+            <label className=' text-sm max-w-[70%] mr-auto text-MyGray '>
+              <input type='checkbox' name='privacy' required className='mr-2' />
+              Zaznaczając akceptujesz naszą{" "}
+              <a href='/politykaprywatnosci' className='underline'>
+                Politykę Prywatności
+              </a>
+            </label>
             <Button
               type='submit'
               disabled={isDisabled}

@@ -96,3 +96,26 @@
   background: #888;
   border-radius: 10px;
 }
+
+:root {
+  --myBrown: #c2a182;
+  --MyGray: #a7a3a3;
+  --MyLightGray: #fafafac1;
+}
+html {
+  scroll-behavior: smooth;
+}
+scroll-hidden {
+  overflow: hidden;
+  height: 100vh;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+button {
+  cursor: pointer;
+}
+li:hover {
+  color: var(--myBrown);
+}
