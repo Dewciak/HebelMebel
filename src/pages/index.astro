@@ -21,20 +21,18 @@ import Navbar from "@/components/Navbar.tsx";
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;200;300;400;500;700&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <header>
 		<Navbar client:only="react" furniturePage={false} />
-    </header>
     <main class="snap-y dark:bg-MyDarkBg ">
       <Hero />
       <Realizations client:visible  />
       <WriteUs />
-	  <AboutUs />
+	    <AboutUs />
       <Quote />
       <Furnitures />
       <WoodTypes client:visible />
       <Stages />
-      <Footer />
     </main>
+      <Footer />
   </body>
 </html>
 <script>

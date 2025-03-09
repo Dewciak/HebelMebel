@@ -1,9 +1,10 @@
-import {useStore} from "@nanostores/react";
 import {useEffect, useState} from "react";
 import {Link} from "react-scroll";
 import DarkThemeToggle from "./DarkThemeToggle";
 import HamburgerMenu from "./HamburgerMenu";
 import MobileMenu from "./MobileMenu";
+import Logo from "./Logo";
+
 interface Props {
   furniturePage: boolean;
 }
@@ -19,6 +20,7 @@ const Navbar = ({furniturePage}: Props) => {
       setDarkMode(false);
     }
   });
+  // Save dark mode preference to local storage
 
   const handleToggle = () => {
     const newDarkMode = !isDarkMode;
@@ -26,59 +28,60 @@ const Navbar = ({furniturePage}: Props) => {
     setDarkMode(newDarkMode);
     localStorage.setItem("darkMode", newDarkMode.toString());
   };
+  // switch between dark and light mode
 
-  const handleScroll = (targetId: string) => {
-    const element = document.getElementById(targetId);
-    if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-  };
+  const sections = [
+    {
+      name: "HOME",
+      path: "/",
+      offset: 0,
+    },
+    {
+      name: "REALIZACJE",
+      path: "Realizations",
+      offset: -200,
+    },
+    {
+      name: "O NAS",
+      path: "AboutUs",
+      offset: -400,
+    },
+    {
+      name: "GALERIA",
+      path: "Furnitures",
+      offset: -400,
+    },
+    {
+      name: "KONTAKT",
+      path: "Contact",
+      offset: 0,
+    },
+  ];
 
   return (
-    <div>
+    <nav>
       <div className='w-full fixed bg-white dark:bg-myDarkLighterDark z-[100] hidden xl:flex'>
         <div
-          className={`max-w-[2000px] mx-auto  py-6 flex w-[90%]  justify-between  
-            px-14 items-center text-MyGray font-extralight dark:text-white`}
+          className={`max-w-[2000px] mx-auto  py-6 flex w-[100%]  justify-between  
+            px-10 items-center text-[#262626] font-extralight dark:text-white`}
         >
+          <Logo />
+
           <ul
-            className={`flex text-[1.2rem] w-[470px] justify-between ${furniturePage === true ? "hidden" : ""}`}
+            className={`flex text-[1.2rem] space-x-16 font-extralight justify-between ${furniturePage === true ? "hidden" : ""}`}
             id='navbar-links'
           >
-            <li>
-              <Link to='Realizations' className='cursor-pointer hover:text-MyBrown' offset={-200}>
-                REALIZACJE
-              </Link>
-            </li>
-            <li>
-              <Link to='AboutUs' className='cursor-pointer hover:text-MyBrown' offset={-400}>
-                O&nbsp;NAS
-              </Link>
-            </li>
-            <li>
-              <Link to='Furnitures' className='cursor-pointer hover:text-MyBrown' offset={-400}>
-                MEBLE
-              </Link>
-            </li>
-            <li>
-              <Link to='Contact' className='cursor-pointer hover:text-MyBrown'>
-                KONTAKT
-              </Link>
-            </li>
+            {sections.map((section, key) => (
+              <li key={key}>
+                <Link to={section.path} className='cursor-pointer hover:text-MyBrown' offset={section.offset}>
+                  {section.name}
+                </Link>
+              </li>
+            ))}
           </ul>
-          <div id='logo' className={`w-[4.5rem] duration-300 ${furniturePage === false && "mx-auto"}`}>
-            <a href='/'>
-              <img src='/images/Logo.png' className='size-[4.5rem] block dark:hidden' />
-            </a>
-            <a href='/'>
-              <img src='/LogoWhite.png' className='size-[4.5rem] hidden dark:block' />
-            </a>
-          </div>
+          <DarkThemeToggle isDarkMode={isDarkMode} handleToggle={handleToggle} />
 
-          <ul className='flex text-[1.2rem] text-left dark:text-white w-[470px] justify-between'>
+          {/* <ul className='flex text-[1.2rem] text-left dark:text-white w-[470px] justify-between'>
             <li>
               <a href='tables'>STOŁY</a>
             </li>
@@ -92,9 +95,8 @@ const Navbar = ({furniturePage}: Props) => {
               <a href='/wardrobes'>SZAFY</a>
             </li>
             <li className='absolute right-5 top-[42px]'>
-              <DarkThemeToggle isDarkMode={isDarkMode} handleToggle={handleToggle} />
             </li>
-          </ul>
+          </ul> */}
         </div>
       </div>
 
@@ -103,10 +105,11 @@ const Navbar = ({furniturePage}: Props) => {
           <img src='/images/Logo.png' className='size-[3.5rem] block dark:hidden' />
           <img src='/LogoWhite.png' className='size-[3.5rem] hidden dark:block' />
         </a>
+
         <HamburgerMenu />
       </div>
       <MobileMenu isDarkMode={isDarkMode} setDarkMode={setDarkMode} handleToggle={handleToggle} />
-    </div>
+    </nav>
   );
 };
 

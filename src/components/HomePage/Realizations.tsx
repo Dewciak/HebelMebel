@@ -9,14 +9,14 @@ const Realizations = () => {
     <section id='Realizations'>
       <div className='w-full'>
         <div className='text-center xl:mt-28 mt-14'>
-          <h1 className='text-4xl font-extralight dark:text-myDarkText'>Nasze realizacje</h1>
+          <h2 className='text-4xl font-extralight dark:text-myDarkText'>Nasze realizacje</h2>
         </div>
         <div className='mx-auto flex mt-20 overflow-hidden max-w-[1200px]  justify-center items-center '>
           {realizations.map((realization, key) => (
             <img
               key={key}
               src={realization}
-              alt='Realization1 text'
+              alt=''
               onMouseEnter={() => setHoveredRealization(key)}
               onMouseLeave={() => setHoveredRealization(null)}
               className={`${hoveredRealization !== null && hoveredRealization === key ? "md:w-[600px] w-[80%]" : "lg:w-[300px] w-[150px]"} 
