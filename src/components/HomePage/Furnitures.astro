@@ -3,32 +3,39 @@ import { Image } from "astro:assets"
 import Tables from "../../images/Tables.jpg"
 import Dresser from "../../images/dresser.jpg"
 import Rack from "../../images/Rack.jpg"
+import RTV from "../../images/RTV.jpg"
+import Desk from "../../images/desk3.jpg"
+import DinningDesk from "../../images/stół5.jpeg"
+import WineRack from "../../images/Wine2.jpeg"
 ---
 
 <section id="Furnitures">
     <div  class="md:max-w-6xl mx-auto flex flex-col-reverse md:flex-row ml-auto ">
         <div class="md:w-[30%] w-full md:mt-24 mt-20 px-6">
-            <h1 class="text-3xl font-medium dark:text-myDarkText">Wybierz swój styl</h1>
-            <h2 class="text-xl text-[#A7A3A3] mt-5">Neque porro quisquam est qui dolorem ipsum quia dolor sit </h2>
+            <h1 class="text-3xl font-medium dark:text-myDarkText">Galeria</h1>
+            <h2 class="text-xl text-[#A7A3A3] mt-5">Kilka z naszych ostatnich wyrobów </h2>
             <button class="text-MyBrown mt-4 font-medium">Przeglądaj</button>
         </div>
         <div id="Furnitures" class="flex space-x-6 text-2xl overflow-x-scroll md:w-[70%] pb-8 md:mt-10 mx-6 dark:text-myDarkText">
-            <a href="/tables" class="flex flex-col gap-y-8 shrink-0">
-                <Image src={Tables} alt="Tables" class="w-[300px] h-[400px] object-cover "/>
-                <h1>Stoły</h1>
-            </a>
-            <a href="/racks" class="flex flex-col gap-y-8 shrink-0">
-                <Image src={Rack} alt="Tables" class="w-[300px] h-[400px] object-cover "/>
-                <h1>Regały</h1>
+            <a href="/wardrobes" class="flex flex-col gap-y-8 shrink-0">
+                <Image src={DinningDesk} alt="Tables" class="w-[300px] h-[400px] object-cover "/>
+                <h1>Stół do jadalni</h1>
             </a>
             <a href="/dressers" class="flex flex-col gap-y-8 shrink-0">
-                <Image src={Dresser} alt="Tables" class="w-[300px] h-[400px] object-cover "/>
-                <h1>Komody</h1>
+                <Image src={WineRack} alt="Tables" class="w-[300px] h-[400px] object-cover "/>
+                <h1>Stojak na wino</h1>
             </a>
-            <a href="/wardrobes" class="flex flex-col gap-y-8 shrink-0">
-                <Image src={Tables} alt="Tables" class="w-[300px] h-[400px] object-cover "/>
-                <h1>Szafy</h1>
+            <a href="/racks" class="flex flex-col gap-y-8 shrink-0">
+                <Image src={Desk} alt="Tables" class="w-[300px] h-[400px] object-cover "/>
+                <h1>Biurko elektryczne</h1>
             </a>
+            <a href="/tables" class="flex flex-col gap-y-8 shrink-0">
+                <Image src={RTV} alt="Tables" class="w-[300px] h-[400px] object-cover "/>
+                <h1>Komoda RTV</h1>
+            </a>
+           
+           
+           
         </div>
     </div>
 </section>

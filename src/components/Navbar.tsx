@@ -33,7 +33,7 @@ const Navbar = ({furniturePage}: Props) => {
   const sections = [
     {
       name: "HOME",
-      path: "/",
+      path: "Hero",
       offset: 0,
     },
     {
@@ -62,7 +62,7 @@ const Navbar = ({furniturePage}: Props) => {
     <nav>
       <div className='w-full fixed bg-white dark:bg-myDarkLighterDark z-[100] hidden xl:flex'>
         <div
-          className={`max-w-[2000px] mx-auto  py-6 flex w-[100%]  justify-between  
+          className={`max-w-[2000px] mx-auto  py-4 flex w-[100%]  justify-between  
             px-10 items-center text-[#262626] font-extralight dark:text-white`}
         >
           <Logo />
