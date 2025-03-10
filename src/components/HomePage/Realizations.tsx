@@ -1,8 +1,8 @@
 import {useState} from "react";
 
-const realizations = ["/images/Realization-1.jpg", "/images/Realization-2.jpg", "/images/Realization-3.webp"];
-
 const Realizations = () => {
+  const realizations = ["/images/Realization-1.jpg", "/images/Realization-2.jpg", "/images/Realization-3.webp"];
+
   const [hoveredRealization, setHoveredRealization] = useState<number | null>(null);
 
   return (

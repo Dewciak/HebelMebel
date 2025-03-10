@@ -53,7 +53,7 @@ export function ContactForm() {
       </DialogTrigger>
       <DialogContent className='sm:max-w-[425px] dark:bg-myDarkSemiGray top-[35vh] md:top-[50%]'>
         <DialogHeader>
-          <DialogTitle>Daj mi znać jaki mebel cie interesuje</DialogTitle>
+          <DialogTitle>Daj mi znać jaki mebel Cię interesuje</DialogTitle>
           <DialogDescription>
             Zadaj pytanie o cene, termin realizacji lub cokolwiek co ci przychodzi do głowy
           </DialogDescription>

@@ -4,11 +4,11 @@ import Bg from "../../images/Hero.png"
 import BgMobile from "../../images/HeroMobile.png"
 --- 
 <section id="Hero" class="w-full  dark:bg-myDarkLighterDark h-screen lg:h-auto z-0 md:pt-[70px]">
-    <div class="grid md:grid-cols-2 bg-MyLightGray dark:bg-myDarkLighterDark items-center max-w-[1500px] h-full mx-auto ">
+    <div class="grid md:grid-cols-2 md:bg-MyLightGray dark:bg-myDarkLighterDark items-center max-w-[1500px] h-full mx-auto ">
         <div class="flex flex-col justify-center items-center  ">
             <Image src={BgMobile} alt="" class=" object-cover h-[490px] md:hidden"/>
+            <!-- Mobile background -->
             <div class=" mt-8  md:mt-0 flex flex-col z-10 justify-center items-center  h-[90%] w-full md:h-auto md:w-auto  px-6 md:items-start ">
-              
                 <h1 class="text-2xl  tracking-widest text-MyBrown">STOLARSTWO</h1>
                 <h2 class=" md:text-7xl text-6xl  md:text-black py-4 dark:text-white">Hebel Mebel</h2>
                 <p class="md:text-MyGray dark:text-MyLightGray max-w-[450px]">
@@ -16,6 +16,7 @@ import BgMobile from "../../images/HeroMobile.png"
                 </p>
             </div>
         </div>
-            <Image src={Bg} alt="Main bg" class="ml-auto object-cover h-[700px] hidden md:flex"/>
+            <Image src={Bg} alt="" class="ml-auto object-cover h-[700px] hidden md:flex"/>
+            <!-- Desktop background needs to not be in the same column as mobile -->
     </div>
 </section>

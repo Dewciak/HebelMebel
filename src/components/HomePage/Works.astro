@@ -1,0 +1,47 @@
+---
+import { Image } from "astro:assets"
+import RTV from "../../images/rtv.jpg"
+import Desk from "../../images/desk3.jpg"
+import DinningDesk from "../../images/stół5.jpeg"
+import WineRack from "../../images/Wine2.jpeg"
+
+
+const furnitures = [
+    {
+        name: "Stół do jadalni",
+        img: DinningDesk,
+        alt: "Stół do jadalni"
+    },
+    {
+        name: "Stojak na wino",
+        img: WineRack,
+        alt: "Stojak na wino"
+    },
+    {
+        name: "Biurko elektryczne",
+        img: Desk,
+        alt: "Biurko elektryczne"
+    },
+    {
+        name: "Komoda RTV",
+        img: RTV,
+        alt: "Komoda RTV"
+    }
+]
+---
+
+<section id="Works">
+    <div  class="md:max-w-6xl mx-auto flex flex-col md:flex-row ml-auto ">
+        <div class="md:w-[30%] w-full md:mt-24 mb-20 px-6">
+            <h1 class="text-3xl font-medium dark:text-myDarkText">Galeria</h1>
+            <h2 class="text-xl text-[#A7A3A3] mt-5">Zdjęcia naszych ostatnich wyrobów od naszych klientów </h2>
+        </div>
+        <div id="Works" class="flex space-x-6 text-2xl overflow-x-scroll md:w-[70%] pb-8 md:mt-10 mx-6 dark:text-myDarkText">
+           {furnitures.map((furniture,key)=> 
+           (<a href="/wardrobes" class="flex flex-col gap-y-8 shrink-0">
+            <Image src={furniture.img} alt={furniture.alt} class="w-[300px] h-[400px] object-cover "/>
+            <h1>{furniture.name}</h1>
+        </a>))}
+        </div>
+    </div>
+</section>

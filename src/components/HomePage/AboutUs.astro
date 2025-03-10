@@ -1,6 +1,5 @@
 ---
 import { AboutDialog } from "../AboutDialog"
-import {motion} from "framer-motion";
 ---
 <section id="AboutUs">
     <div   class="flex lg:flex-row flex-col max-w-[900px] mx-auto justify-center items-center dark:text-white">
@@ -12,8 +11,7 @@ import {motion} from "framer-motion";
           flex text-lg mt-0 lg:mt-14   ">
             <div id="borderAnimation"/>
             <div class="z-10 ml-1 mt-1 rounded-[10px] bg-white dark:bg-myDarkSemiGray w-[350px] h-[350px] flex items-center flex-col justify-center px-10">
-              <p >Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
-                "There is no one who  seeks after it and wants to have it, simply because it is pain...</p>
+              <p >Hebel Mebel to firma, która tworzy meble z prawdziwą duszą. Łączymy tradycyjne techniki stolarskie  ...</p>
               <div class="mt-2"><AboutDialog client:visible/></div>
             </div>
             
@@ -33,14 +31,12 @@ import {motion} from "framer-motion";
     position: absolute;
     height: 360px;
     width: 360px;
-    /* top: 50%;
-    left: 50%;
-    transform: translateX(-50%,-50%); */
     background-image: repeating-conic-gradient( from var(--angle),transparent 50%, #C2A182);
     z-index: 0;
     animation: 7s spinBorder linear infinite;
     border-radius: 15px;
     }
+
     #borderAnimation::before{
     filter: blur(1.5rem);
     opacity: 0.5;
@@ -54,6 +50,7 @@ import {motion} from "framer-motion";
       --angle: 360deg;
     }
   }
+  /* Rotating border animation */
 </style>
 
 

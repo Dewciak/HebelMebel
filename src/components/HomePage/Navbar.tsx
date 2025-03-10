@@ -1,9 +1,9 @@
 import {useEffect, useState} from "react";
 import {Link} from "react-scroll";
-import DarkThemeToggle from "./DarkThemeToggle";
-import HamburgerMenu from "./HamburgerMenu";
-import MobileMenu from "./MobileMenu";
-import Logo from "./Logo";
+import DarkThemeToggle from "../DarkThemeToggle";
+import HamburgerMenu from "../HamburgerMenu";
+import MobileMenu from "../MobileMenu";
+import Logo from "../Logo";
 
 interface Props {
   furniturePage: boolean;
