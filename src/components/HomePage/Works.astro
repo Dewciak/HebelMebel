@@ -3,7 +3,8 @@ import { Image } from "astro:assets"
 import RTV from "../../images/rtv.webp"
 import Desk from "../../images/desk.jpeg"
 import DinningDesk from "../../images/stół5.jpeg"
-import WineRack from "../../images/wine.jpg"
+import Wine from "../../images/wine.jpg"
+
 
 const furnitures = [
     {
@@ -13,7 +14,7 @@ const furnitures = [
     },
     {
         name: "Stojak na wino",
-        img: WineRack,
+        img: Wine,
         alt: "Stojak na wino"
     },
     {
@@ -35,7 +36,7 @@ const furnitures = [
             <h1 class="text-3xl font-medium dark:text-myDarkText">Galeria</h1>
             <h2 class="text-xl text-[#A7A3A3] mt-5">Zdjęcia naszych ostatnich wyrobów od naszych klientów </h2>
         </div>
-        <div id="Works" class="flex space-x-6 text-2xl overflow-x-scroll md:w-[70%] pb-8 md:mt-10 mx-6 dark:text-myDarkText">
+        <div id="Works" class="flex space-x-6 text-2xl overflow-x-scroll md:w-[70%] pb-6 md:mt-10 mx-6 dark:text-myDarkText">
            {furnitures.map((furniture,key)=> 
            (<div class="flex flex-col gap-y-8 shrink-0">
             <Image src={furniture.img} alt={furniture.alt} class="w-[300px] h-[400px] object-cover "/>
@@ -44,3 +45,4 @@ const furnitures = [
         </div>
     </div>
 </section>
+
