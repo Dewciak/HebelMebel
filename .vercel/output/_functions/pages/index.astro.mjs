@@ -38,7 +38,7 @@ const BgMobile = new Proxy({"src":"/_astro/HeroMobile.CnANPZZ7.png","width":1146
 const $$Hero = createComponent(($$result, $$props, $$slots) => {
   return renderTemplate`${maybeRenderHead()}<section id="Hero" class="w-full  dark:bg-myDarkLighterDark h-screen lg:h-auto z-0 md:pt-[70px] md:bg-MyLightGray"> <div class="grid md:grid-cols-2  dark:bg-myDarkLighterDark items-center max-w-[1500px] h-full mx-auto "> <div class="flex flex-col justify-center items-center  "> ${renderComponent($$result, "Image", $$Image, { "src": BgMobile, "alt": "", "class": " object-cover h-[490px] md:hidden" })} <!-- Mobile background --> <div class=" mt-8  md:mt-0 flex flex-col z-10 justify-center items-center  h-[90%] w-full md:h-auto md:w-auto  px-6 md:items-start "> <h1 class="text-2xl  tracking-widest text-MyBrown">STOLARSTWO</h1> <h2 class=" md:text-7xl text-6xl  md:text-black py-4 dark:text-white">Hebel Mebel</h2> <p class="md:text-MyGray dark:text-MyLightGray max-w-[450px]">
 Projektujemy i wykonujemy meble, które łączą w sobie tradycyjne rzemiosło, nowoczesny styl oraz pełną personalizację, aby idealnie pasowały do Twojej przestrzeni.
-</p> </div> </div> ${renderComponent($$result, "Image", $$Image, { "src": Bg, "alt": "", "class": "ml-auto object-cover h-[700px] hidden md:flex" })} <!-- Desktop background needs to not be in the same column as mobile --> </div> </section>`;
+</p> <!-- <div/> --> </div> </div> ${renderComponent($$result, "Image", $$Image, { "src": Bg, "alt": "", "class": "ml-auto object-cover h-[700px] hidden md:flex" })} <!-- Desktop background needs to not be in the same column as mobile --> </div> </section>`;
 }, "/Users/wiktordawid/Desktop/HebelMebel/HebelMebel/src/components/HomePage/Hero.astro", void 0);
 
 const Realizations = () => {
@@ -127,7 +127,7 @@ const DinningDesk = new Proxy({"src":"/_astro/stół5.Cv6DK2op.jpeg","width":15
 						}
 					});
 
-const WineRack = new Proxy({"src":"/_astro/wine.D6xfxOPh.jpg","width":599,"height":799,"format":"jpg"}, {
+const Wine = new Proxy({"src":"/_astro/wine.D6xfxOPh.jpg","width":599,"height":799,"format":"jpg"}, {
 						get(target, name, receiver) {
 							if (name === 'clone') {
 								return structuredClone(target);
@@ -149,7 +149,7 @@ const $$Works = createComponent(($$result, $$props, $$slots) => {
     },
     {
       name: "Stojak na wino",
-      img: WineRack,
+      img: Wine,
       alt: "Stojak na wino"
     },
     {
