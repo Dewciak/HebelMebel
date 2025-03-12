@@ -1,10 +1,9 @@
 ---
 import { Image } from "astro:assets"
 import RTV from "../../images/rtv.webp"
-import Desk from "../../images/Desk3.webp"
+import Desk from "../../images/desk.jpeg"
 import DinningDesk from "../../images/stół5.jpeg"
-import WineRack from "../../images/Wine2.jpeg"
-
+import WineRack from "../../images/wine.jpg"
 
 const furnitures = [
     {
@@ -38,10 +37,10 @@ const furnitures = [
         </div>
         <div id="Works" class="flex space-x-6 text-2xl overflow-x-scroll md:w-[70%] pb-8 md:mt-10 mx-6 dark:text-myDarkText">
            {furnitures.map((furniture,key)=> 
-           (<a href="/wardrobes" class="flex flex-col gap-y-8 shrink-0">
+           (<div class="flex flex-col gap-y-8 shrink-0">
             <Image src={furniture.img} alt={furniture.alt} class="w-[300px] h-[400px] object-cover "/>
-            <h1>{furniture.name}</h1>
-        </a>))}
+            {/* <h1>{furniture.name}</h1> */}
+        </div>))}
         </div>
     </div>
 </section>
