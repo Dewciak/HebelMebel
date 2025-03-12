@@ -39,17 +39,17 @@ const Navbar = ({furniturePage}: Props) => {
     {
       name: "REALIZACJE",
       path: "Realizations",
-      offset: -200,
+      offset: -150,
     },
     {
       name: "O NAS",
       path: "AboutUs",
-      offset: -400,
+      offset: -150,
     },
     {
       name: "GALERIA",
-      path: "Furnitures",
-      offset: -400,
+      path: "Works",
+      offset: -150,
     },
     {
       name: "KONTAKT",
