@@ -1,15 +1,16 @@
 import React, {useEffect} from "react";
 import {isMobileMenuOpen} from "./StateStore";
 import {useStore} from "@nanostores/react";
-import {Link} from "react-scroll";
+import {Link as ScrollLink} from "react-scroll";
 
 interface Props {
   isDarkMode: boolean;
   setDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
   handleToggle: (checked: boolean) => void;
+  policyPrivacyPage: boolean;
 }
 
-export const MobileMenu = ({isDarkMode, setDarkMode, handleToggle}: Props) => {
+export const MobileMenu = ({isDarkMode, setDarkMode, handleToggle, policyPrivacyPage}: Props) => {
   const $isMobileMenuOpen = useStore(isMobileMenuOpen);
 
   const [blockScroll, allowScroll] = useScrollBlock();
@@ -50,10 +51,14 @@ export const MobileMenu = ({isDarkMode, setDarkMode, handleToggle}: Props) => {
           className='space-y-6  dark:text-myDarkText text-2xl relative py-6 flex justify-center flex-col w-full items-center text-center'
         >
           {sections.map((section, key) => (
-            <li key={key} className='w-full py-2 px-10'>
-              <Link to={section.path} onClick={() => isMobileMenuOpen.set(!$isMobileMenuOpen)}>
-                {section.name}
-              </Link>
+            <li key={key}>
+              {policyPrivacyPage ? (
+                <a href={`/#${section.path}`}>{section.name}</a>
+              ) : (
+                <ScrollLink to={section.path} onClick={() => isMobileMenuOpen.set(!$isMobileMenuOpen)}>
+                  {section.name}
+                </ScrollLink>
+              )}
             </li>
           ))}
           <li>

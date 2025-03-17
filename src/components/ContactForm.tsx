@@ -88,7 +88,7 @@ export function ContactForm() {
 
           <DialogFooter className='flex'>
             <label className=' text-sm max-w-[70%] mr-auto text-MyGray '>
-              <input type='checkbox' name='privacy' required className='mr-2' />
+              <input type='checkbox' name='privacy' required className='mr-2 mt-4 md:mt-0' />
               Zaznaczając akceptujesz naszą{" "}
               <a href='/politykaprywatnosci' className='underline'>
                 Politykę Prywatności

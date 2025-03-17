@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import {Link} from "react-scroll";
+import {Link as ScrollLink} from "react-scroll";
 import DarkThemeToggle from "../DarkThemeToggle";
 import HamburgerMenu from "../HamburgerMenu";
 import MobileMenu from "../MobileMenu";
@@ -7,8 +7,9 @@ import Logo from "../Logo";
 
 interface Props {
   furniturePage: boolean;
+  policyPrivacyPage: boolean;
 }
-const Navbar = ({furniturePage}: Props) => {
+const Navbar = ({furniturePage, policyPrivacyPage}: Props) => {
   const [isDarkMode, setDarkMode] = useState(false);
   useEffect(() => {
     const savedDarkMode = localStorage.getItem("darkMode");
@@ -73,30 +74,19 @@ const Navbar = ({furniturePage}: Props) => {
           >
             {sections.map((section, key) => (
               <li key={key}>
-                <Link to={section.path} className='cursor-pointer hover:text-MyBrown' offset={section.offset}>
-                  {section.name}
-                </Link>
+                {policyPrivacyPage ? (
+                  <a href={`/#${section.path}`} className='cursor-pointer hover:text-MyBrown'>
+                    {section.name}
+                  </a>
+                ) : (
+                  <ScrollLink to={section.path} className='cursor-pointer hover:text-MyBrown' offset={section.offset}>
+                    {section.name}
+                  </ScrollLink>
+                )}
               </li>
             ))}
           </ul>
           <DarkThemeToggle isDarkMode={isDarkMode} handleToggle={handleToggle} />
-
-          {/* <ul className='flex text-[1.2rem] text-left dark:text-white w-[470px] justify-between'>
-            <li>
-              <a href='tables'>STOŁY</a>
-            </li>
-            <li>
-              <a href='/dressers'>KOMODY</a>
-            </li>
-            <li>
-              <a href='racks'>REGAŁY</a>
-            </li>
-            <li>
-              <a href='/wardrobes'>SZAFY</a>
-            </li>
-            <li className='absolute right-5 top-[42px]'>
-            </li>
-          </ul> */}
         </div>
       </div>
 
@@ -108,7 +98,12 @@ const Navbar = ({furniturePage}: Props) => {
 
         <HamburgerMenu />
       </div>
-      <MobileMenu isDarkMode={isDarkMode} setDarkMode={setDarkMode} handleToggle={handleToggle} />
+      <MobileMenu
+        isDarkMode={isDarkMode}
+        setDarkMode={setDarkMode}
+        handleToggle={handleToggle}
+        policyPrivacyPage={policyPrivacyPage}
+      />
     </nav>
   );
 };
