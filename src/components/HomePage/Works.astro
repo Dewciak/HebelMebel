@@ -4,9 +4,15 @@ import RTV from "../../images/rtvPic.webp"
 import Desk from "../../images/desk.jpeg"
 import DinningDesk from "../../images/table.webp"
 import Wine from "../../images/wine.jpg"
+import CoffeyTable from "../../images/coffetable.jpeg"
 
 
 const furnitures = [
+    {
+        name: "Stolik kawowy",
+        img: CoffeyTable,
+        alt: "Stolik kawowy"
+    },
     {
         name: "Stół do jadalni",
         img: DinningDesk,
@@ -27,13 +33,15 @@ const furnitures = [
         img: RTV,
         alt: "Komoda RTV"
     }
+    
+
 ]
 ---
 
 <section id="Works">
     <div  class="md:max-w-6xl mx-auto flex flex-col md:flex-row ml-auto ">
         <div class="md:w-[30%] w-full md:mt-24 mb-20 px-6">
-            <h1 class="text-3xl font-medium dark:text-myDarkText">Galeria</h1>
+            <h1 class="text-3xl font-medium dark:text-myDarkText text-[#493A3A]">Galeria</h1>
             <h2 class="text-xl text-[#A7A3A3] mt-5">Zdjęcia naszych ostatnich wyrobów od naszych klientów </h2>
         </div>
         <div id="Works" class="flex space-x-6 text-2xl overflow-x-scroll md:w-[70%] pb-6 md:mt-10 mx-6 dark:text-myDarkText">

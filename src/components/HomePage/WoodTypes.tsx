@@ -30,13 +30,13 @@ const WoodTypes = () => {
       name: "Buk",
       description:
         "Drewno bukowe to twardy i wytrzymały materiał o ciepłej, złocisto-beżowej barwie. Jego gładka struktura świetnie sprawdza się w produkcji mebli i dekoracji, dodając wnętrzom elegancji i przytulności.",
-      img: "/images/Beech.jpg",
+      img: "/images/Beech.webp",
     },
     {
       name: "Brzoza",
       description:
         "Brzozowe drewno to subtelny, jasny odcień, który wnosi do wnętrza świeżość i naturalną elegancję. Jego kremowe tony, przełamane delikatnymi, ciepłymi akcentami, doskonale rozświetlają przestrzeń, nadając jej lekkość i przytulność.",
-      img: "/images/Birch.jpg",
+      img: "/images/Birch.webp",
     },
   ];
 

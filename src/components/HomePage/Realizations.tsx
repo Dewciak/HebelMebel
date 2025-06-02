@@ -1,7 +1,7 @@
 import {useState} from "react";
 
 const Realizations = () => {
-  const realizations = ["/images/Realization-1.jpg", "/images/Realization-2.jpg", "/images/Realization-3.webp"];
+  const realizations = ["/images/Realization2.jpg", "/images/Realization3.jpg", "/images/Realization1.jpg"];
 
   const [hoveredRealization, setHoveredRealization] = useState<number | null>(null);
 
@@ -9,7 +9,7 @@ const Realizations = () => {
     <section id='Realizations'>
       <div className='w-full'>
         <div className='text-center xl:mt-28 mt-14'>
-          <h2 className='text-4xl font-extralight dark:text-myDarkText'>Nasze realizacje</h2>
+          <h2 className='text-4xl font-medium text-[#493A3A] dark:text-myDarkText '>Nasze realizacje</h2>
         </div>
         <div className='mx-auto flex mt-20 overflow-hidden max-w-[1200px]  justify-center items-center '>
           {realizations.map((realization, key) => (
