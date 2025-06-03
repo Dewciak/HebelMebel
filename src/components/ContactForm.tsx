@@ -32,7 +32,7 @@ export function ContactForm() {
           </DialogDescription>
         </DialogHeader>
         <form action='https://api.web3forms.com/submit' method='POST'>
-          <input type='hidden' name='access_key' value='wEK5msa2bWad9N7'></input>
+          <input type='hidden' name='access_key' value='cc8eba63-73d3-43d6-9b6d-a8f0e780d841'></input>
           <div className='grid gap-4 py-4'>
             <div className='grid grid-cols-4 items-center gap-4'>
               <Label htmlFor='email' className='text-right'>
