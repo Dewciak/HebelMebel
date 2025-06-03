@@ -17,6 +17,7 @@ import Saw from "./Saw";
 
 export function ContactForm() {
   const [isOpen, setIsOpen] = useState(false);
+  const [result, setResult] = useState("");
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
@@ -30,7 +31,8 @@ export function ContactForm() {
             Zadaj pytanie o cene, termin realizacji lub cokolwiek co ci przychodzi do głowy
           </DialogDescription>
         </DialogHeader>
-        <form name='contact' method='POST' data-netlify='true'>
+        <form action='https://api.web3forms.com/submit' method='POST'>
+          <input type='hidden' name='access_key' value='wEK5msa2bWad9N7'></input>
           <div className='grid gap-4 py-4'>
             <div className='grid grid-cols-4 items-center gap-4'>
               <Label htmlFor='email' className='text-right'>
