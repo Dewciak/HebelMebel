@@ -20,9 +20,6 @@ export function AboutDialog() {
           <DialogDescription></DialogDescription>
         </DialogHeader>
         <p className='text-justify dark:text-white overflow-y-scroll h-[400px] px-4 '>
-          Hebel Mebel – meble z duszą, tworzone z serca, z prawdziwego drewna.
-          <br />
-          <br />
           Jesteśmy rodzinną pracownią stolarską – ojciec i syn, którzy razem tworzą coś wyjątkowego. W Hebel Mebel
           łączymy tradycyjne rzemiosło z prawdziwą pasją do litego drewna. <br />
           <br /> Nasze meble to nie tylko ładne przedmioty – to rzeczy, które przetrwają lata i pokolenia. Każdy mebel
