@@ -47,7 +47,7 @@ const furnitures = [
         <div id="Works" class="flex space-x-6 text-2xl overflow-x-scroll md:w-[70%] pb-6 md:mt-10 mx-6 dark:text-myDarkText">
            {furnitures.map((furniture,key)=> 
            (<div class="flex flex-col gap-y-8 shrink-0">
-            <Image src={furniture.img} alt={furniture.alt} class="w-[300px] h-[400px] object-cover "/>
+            <Image loading={"eager"} src={furniture.img} alt={furniture.alt} class="w-[300px] h-[400px] object-cover "/>
             {/* <h1>{furniture.name}</h1> */}
         </div>))}
         </div>

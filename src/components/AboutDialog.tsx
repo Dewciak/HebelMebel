@@ -12,7 +12,9 @@ export function AboutDialog() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <button className='text-MyBrown font-medium'>więcej</button>
+        <button aria-label='więcej' className='text-MyBrown font-medium'>
+          więcej
+        </button>
       </DialogTrigger>
       <DialogContent className='m:max-w-[600px] dark:bg-myDarkSemiGray'>
         <DialogHeader>

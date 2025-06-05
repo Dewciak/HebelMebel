@@ -50,7 +50,14 @@ const WriteButton = React.forwardRef<SVGSVGElement, React.ComponentProps<"svg">>
           delay: 0.5,
         }}
       />
-      <motion.text x='72.5' y='32' textAnchor='middle' dominantBaseline='middle' className='fill-black dark:fill-white'>
+      <motion.text
+        aria-label='Napisz'
+        x='72.5'
+        y='32'
+        textAnchor='middle'
+        dominantBaseline='middle'
+        className='fill-black dark:fill-white'
+      >
         Napisz
       </motion.text>
     </motion.svg>
