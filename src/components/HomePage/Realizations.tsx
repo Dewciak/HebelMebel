@@ -1,7 +1,7 @@
 import {useState} from "react";
 
 const Realizations = () => {
-  const realizations = ["/images/Realization-3.jpeg", "/images/table.webp", "/images/Realization-1.jpeg"];
+  const realizations = ["/images/Realizations/1.webp", "/images/Realizations/2.webp", "/images/Realizations/3.webp"];
 
   const [hoveredRealization, setHoveredRealization] = useState<number | null>(null);
 

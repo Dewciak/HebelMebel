@@ -6,37 +6,37 @@ const WoodTypes = () => {
       name: "Dąb",
       description:
         "Jedno z najbardziej cenionych gatunków drewna, charakteryzujące się wysoką trwałością, eleganckim wyglądem oraz wyrazistym usłojeniem. Idealny wybór do produkcji mebli, łączący naturalne piękno z funkcjonalnością.",
-      img: "/images/Oak.jpg",
+      img: "/images/Woods/Oak.jpg",
     },
     {
       name: "Jesion",
       description:
         "Jesion to twarde i elastyczne drewno o jasnej barwie i wyraźnym rysunku słojów. Jest cenione w produkcji mebli i elementów konstrukcyjnych ze względu na trwałość i łatwość obróbki.",
-      img: "/images/Ash.jpg",
+      img: "/images/Woods/Ash.jpg",
     },
     {
       name: "Orzech",
       description:
         "Drewno orzechowe jest cenione za swoją twardość, gęstość i charakterystyczny, ciemnobrązowy kolor z wyraźnym usłojeniem. Jest popularne w produkcji mebli, rzeźbie oraz wykończeniu wnętrz, charakteryzując się eleganckim ",
-      img: "/images/Nut.jpg",
+      img: "/images/Woods/Nut.jpg",
     },
     {
       name: "Sosna",
       description:
         "Drewno sosnowe jest lekkie, elastyczne i łatwe do obróbki, co sprawia, że jest popularne w budownictwie i produkcji mebli. Charakteryzuje się jasną barwą i widocznymi słojami, a także ma przyjemny, naturalny zapach.",
-      img: "/images/Pine.webp",
+      img: "/images/Woods/Pine.webp",
     },
     {
       name: "Buk",
       description:
         "Drewno bukowe to twardy i wytrzymały materiał o ciepłej, złocisto-beżowej barwie. Jego gładka struktura świetnie sprawdza się w produkcji mebli i dekoracji, dodając wnętrzom elegancji i przytulności.",
-      img: "/images/Beech.webp",
+      img: "/images/Woods/Beech.webp",
     },
     {
       name: "Brzoza",
       description:
         "Brzozowe drewno to subtelny, jasny odcień, który wnosi do wnętrza świeżość i naturalną elegancję. Jego kremowe tony, przełamane delikatnymi, ciepłymi akcentami, doskonale rozświetlają przestrzeń, nadając jej lekkość i przytulność.",
-      img: "/images/Birch.webp",
+      img: "/images/Woods/Birch.webp",
     },
   ];
 
