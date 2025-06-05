@@ -8,6 +8,7 @@ interface Props {
 const WriteButton = React.forwardRef<SVGSVGElement, React.ComponentProps<"svg">>(({className, ...props}, ref) => {
   return (
     <motion.svg
+      aria-label='Napisz'
       width='153'
       height='60'
       viewBox='0 0 150 60'

@@ -11,6 +11,7 @@ const DarkThemeToggle = ({
 }) => {
   return (
     <button
+      aria-label='Włącz ciemny motyw'
       className='flex border-2 dark:border-white 
   border-[#dedddd] rounded-[20px] p-0'
       onClick={() => handleToggle(!isDarkMode)}
