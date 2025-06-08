@@ -19,9 +19,9 @@ const Realizations = () => {
               alt=''
               onMouseEnter={() => setHoveredRealization(key)}
               onMouseLeave={() => setHoveredRealization(null)}
-              className={`${hoveredRealization !== null && hoveredRealization === key ? "md:w-[600px] w-[80%]" : "lg:w-[300px] w-[150px]"} 
+              className={`${hoveredRealization !== null && hoveredRealization === key ? "lg:w-[600px] w-[80%]" : "lg:w-[300px] w-[150px]"} 
                 ${hoveredRealization === null ? "w-[33%] lg:w-[400px]" : ""} 
-                bg-gray-400 md:h-[800px] h-[600px] transition-all duration-300 object-cover`}
+                bg-gray-400 lg:h-[800px] h-[600px] transition-all duration-300 object-cover`}
             />
           ))}
         </div>
