@@ -9,6 +9,7 @@ const HamburgerMenu = () => {
   return (
     <div className='z-30  flex'>
       <button
+        aria-label='Mobile Menu'
         className='hamburgerMenu dark:hidden'
         onClick={() => {
           isMobileMenuOpen.set(!$isMobileMenuOpen);
@@ -18,6 +19,7 @@ const HamburgerMenu = () => {
       </button>{" "}
       <button
         className='hamburgerMenu hidden dark:block'
+        aria-label='Mobile Menu'
         onClick={() => {
           isMobileMenuOpen.set(!$isMobileMenuOpen);
         }}

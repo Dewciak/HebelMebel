@@ -1,7 +1,6 @@
 import React, {useEffect} from "react";
 import {isMobileMenuOpen} from "./StateStore";
 import {useStore} from "@nanostores/react";
-import {Link as ScrollLink} from "react-scroll";
 
 interface Props {
   isDarkMode: boolean;
@@ -23,22 +22,34 @@ export const MobileMenu = ({isDarkMode, setDarkMode, handleToggle, policyPrivacy
     }
   }, [$isMobileMenuOpen, blockScroll, allowScroll]);
 
+  const scrollToSectionWithOffset = (id: string, offset: number) => {
+    const element = document.getElementById(id);
+    if (!element) return;
+
+    const top = element.getBoundingClientRect().top + window.scrollY + offset;
+    window.scrollTo({top, behavior: "smooth"});
+  };
+
   const sections = [
     {
-      name: "Galeria",
-      path: "Realizations",
+      name: "Strona główna",
+      path: "Hero",
+      offset: 0,
     },
     {
       name: "O nas",
       path: "AboutUs",
+      offset: 0,
     },
     {
-      name: "Meble",
-      path: "Furnitures",
+      name: "Galeria",
+      path: "Works",
+      offset: -150,
     },
     {
       name: "Kontakt",
       path: "Contact",
+      offset: 0,
     },
   ];
   return (
@@ -55,9 +66,17 @@ export const MobileMenu = ({isDarkMode, setDarkMode, handleToggle, policyPrivacy
               {policyPrivacyPage ? (
                 <a href={`/#${section.path}`}>{section.name}</a>
               ) : (
-                <ScrollLink to={section.path} onClick={() => isMobileMenuOpen.set(!$isMobileMenuOpen)}>
+                <a
+                  href={`#${section.path}`}
+                  onClick={(e) => {
+                    isMobileMenuOpen.set(!$isMobileMenuOpen);
+                    e.preventDefault(); // zapobiega natychmiastowemu skokowi
+                    scrollToSectionWithOffset(section.path, section.offset);
+                  }}
+                  className='cursor-pointer hover:text-MyBrown'
+                >
                   {section.name}
-                </ScrollLink>
+                </a>
               )}
             </li>
           ))}

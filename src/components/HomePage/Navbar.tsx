@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import {Link as ScrollLink} from "react-scroll";
+
 import DarkThemeToggle from "../DarkThemeToggle";
 import HamburgerMenu from "../HamburgerMenu";
 import Logo from "../Logo";
@@ -31,6 +31,14 @@ const Navbar = ({furniturePage, policyPrivacyPage}: Props) => {
   };
   // switch between dark and light mode
 
+  const scrollToSectionWithOffset = (id: string, offset: number) => {
+    const element = document.getElementById(id);
+    if (!element) return;
+
+    const top = element.getBoundingClientRect().top + window.scrollY + offset;
+    window.scrollTo({top, behavior: "smooth"});
+  };
+
   const sections = [
     {
       name: "STRONA GŁÓWNA",
@@ -45,12 +53,12 @@ const Navbar = ({furniturePage, policyPrivacyPage}: Props) => {
     {
       name: "O NAS",
       path: "AboutUs",
-      offset: -150,
+      offset: -350,
     },
     {
       name: "GALERIA",
       path: "Works",
-      offset: -150,
+      offset: -350,
     },
     {
       name: "KONTAKT",
@@ -79,9 +87,16 @@ const Navbar = ({furniturePage, policyPrivacyPage}: Props) => {
                     {section.name}
                   </a>
                 ) : (
-                  <ScrollLink to={section.path} className='cursor-pointer hover:text-MyBrown' offset={section.offset}>
+                  <a
+                    href={`#${section.path}`}
+                    onClick={(e) => {
+                      e.preventDefault(); // zapobiega natychmiastowemu skokowi
+                      scrollToSectionWithOffset(section.path, section.offset);
+                    }}
+                    className='cursor-pointer hover:text-MyBrown'
+                  >
                     {section.name}
-                  </ScrollLink>
+                  </a>
                 )}
               </li>
             ))}
@@ -91,12 +106,12 @@ const Navbar = ({furniturePage, policyPrivacyPage}: Props) => {
       </div>
 
       <div className='fixed flex xl:hidden bg-white items-center w-full  dark:bg-myDarkLighterDark justify-between px-4 py-2 z-30'>
-        <a href='/'>
-          <img src='/images/Logo.webp' className='size-[3.5rem] block dark:hidden' />
-          <img src='/LogoWhite.webp' className='size-[3.5rem] hidden dark:block' />
+        <a href='/' aria-label='Strona Główna'>
+          <img src='/images/Logo.webp' alt='Logo' className='size-[3.5rem] block dark:hidden' />
+          <img src='/LogoWhite.webp' alt='Logo' className='size-[3.5rem] hidden dark:block' />
         </a>
 
-        <HamburgerMenu />
+        <HamburgerMenu aria-label='Menu Mobilne' />
       </div>
       <MobileMenu
         isDarkMode={isDarkMode}
