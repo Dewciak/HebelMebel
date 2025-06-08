@@ -45,7 +45,7 @@ const WoodTypes = () => {
   return (
     <div className='flex flex-col-reverse md:flex-row md:max-w-[900px] mx-auto md:mt-40 mt-28 px-3'>
       <div className='md:w-[50%] space-y-6 mt-16 flex items-center justify-center md:items-start md:justify-start flex-col'>
-        <h1 className='text-5xl font-extralight dark:text-myDarkText'>{selectedWood.name}</h1>
+        <h1 className='text-5xl font-[400] dark:text-myDarkText text-MyDarkBrown '>{selectedWood.name}</h1>
         <div className='flex space-x-0 gap-2 '>
           {woods.map((wood, index) => (
             <Wood key={index} img={wood.img} setWood={() => setSelectedWood(wood)} />
