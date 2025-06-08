@@ -9,6 +9,7 @@ export default {
         // MyBrown: "#493A3A",
         // MyBrown: "#C2A182",
         MyBrown: "#D4AF8D",
+
         MyGray: "#A7A3A3",
         MyLightGray: "#fafafac1",
         MyDarkBg: "#212124",
