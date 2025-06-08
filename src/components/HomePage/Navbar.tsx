@@ -20,6 +20,14 @@ const Navbar = ({furniturePage, policyPrivacyPage}: Props) => {
       document.documentElement.classList.remove("dark");
       setDarkMode(false);
     }
+    document.addEventListener("scroll", () => {
+      const scroll = document.documentElement.scrollTop;
+      if (scroll >= 100) {
+        document.body.classList.add("fullNavbar");
+      } else {
+        document.body.classList.remove("fullNavbar");
+      }
+    });
   });
   // Save dark mode preference to local storage
 
@@ -41,27 +49,27 @@ const Navbar = ({furniturePage, policyPrivacyPage}: Props) => {
 
   const sections = [
     {
-      name: "STRONA GŁÓWNA",
+      name: "Główna",
       path: "Hero",
       offset: 0,
     },
     {
-      name: "REALIZACJE",
+      name: "Realizacje",
       path: "Realizations",
       offset: -150,
     },
     {
-      name: "O NAS",
+      name: "O nas",
       path: "AboutUs",
       offset: -350,
     },
     {
-      name: "GALERIA",
+      name: "Galeria",
       path: "Works",
       offset: -350,
     },
     {
-      name: "KONTAKT",
+      name: "Kontakt",
       path: "Contact",
       offset: 0,
     },
@@ -69,15 +77,15 @@ const Navbar = ({furniturePage, policyPrivacyPage}: Props) => {
 
   return (
     <nav>
-      <div className='w-full fixed bg-white dark:bg-myDarkLighterDark z-[100] hidden xl:flex'>
+      <div className='navbar w-[80%] left-[50%] duration-300 translate-x-[-50%] fixed bg-white rounded-[30px] mt-6 dark:bg-myDarkLighterDark z-[100] hidden xl:flex'>
         <div
-          className={`max-w-[2000px] mx-auto  py-4 flex w-[100%]  justify-between  
+          className={`max-w-[2000px] mx-auto  py-2 flex w-[100%]  justify-between  
             px-10 items-center text-[#262626] font-extralight dark:text-white`}
         >
           <Logo />
 
           <ul
-            className={`flex text-[1.2rem] space-x-16 font-extralight justify-between ${furniturePage === true ? "hidden" : ""}`}
+            className={`flex text-[0.9rem] space-x-10 font-thin justify-between ${furniturePage === true ? "hidden" : ""}`}
             id='navbar-links'
           >
             {sections.map((section, key) => (
@@ -105,7 +113,7 @@ const Navbar = ({furniturePage, policyPrivacyPage}: Props) => {
         </div>
       </div>
 
-      <div className='fixed flex xl:hidden bg-white items-center w-full  dark:bg-myDarkLighterDark justify-between px-4 py-2 z-30'>
+      <div className='navbar fixed flex xl:hidden bg-white items-center w-full  dark:bg-myDarkLighterDark justify-between px-4 py-2 z-30'>
         <a href='/' aria-label='Strona Główna'>
           <img src='/images/Logo.webp' alt='Logo' className='size-[3.5rem] block dark:hidden' />
           <img src='/LogoWhite.webp' alt='Logo' className='size-[3.5rem] hidden dark:block' />

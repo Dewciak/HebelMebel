@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets"
 import Bg from "public/images/Hero.webp"
+import WriteButton from "../WriteButton"
 // import BgMobile from "public/images/Hero.webp"
 
 
@@ -9,21 +10,25 @@ import Bg from "public/images/Hero.webp"
 <head>
   <link rel="preload" as="image" href={Bg.src} />
 </head>
-<section id="Hero" class="w-full  dark:bg-myDarkLighterDark  lg:h-auto z-0 lg:pt-2 pt-24 lg:bg-MyLightGray">
-    <div class="grid lg:grid-cols-2  dark:bg-myDarkLighterDark items-center max-w-[1200px] h-full mx-auto lg:mt-16 ">
+<section id="Hero" class="w-full  dark:bg-myDarkLighterDark  lg:h-auto z-0   lg:bg-MyLightGray">
+    <div class="grid lg:grid-cols-2  dark:bg-myDarkLighterDark items-center max-w-[1300px] h-full mx-auto  ">
         <div class=" flex flex-col justify-between items-start  ">
             <Image loading={"eager"} decoding="sync" src={Bg} alt="" class=" object-cover h-[490px] lg:hidden"/>
             <!-- Mobile background -->
-            <div class=" mt-8  lg:mt-0 flex flex-col z-10 justify-center items-center  h-[90%] w-full lg:h-auto lg:w-auto   lg:items-start lg:justify-start ">
-                <h1 class="text-2xl tracking-widest text-MyBrown font-normal" >STOLARSTWO BULOWICE</h1>
-                <h2 class=" lg:text-7xl text-6xl  lg:text-MyDarkBrown py-4 dark:text-white font-normal">Hebel Mebel</h2>
-                <p class="lg:text-MyGray dark:text-MyLightGray max-w-[450px] ">
+            <div class=" mt-8  lg:mt-10 flex flex-col z-10 justify-center items-center  h-[90%] w-full lg:h-auto lg:w-auto   lg:items-start lg:justify-start ">
+                <h1 class="text-lg  text-MyBrown font-normal" >STOLARSTWO BULOWICE</h1>
+                <h2 class=" lg:text-6xl text-6xl  lg:text-MyDarkBrown dark:text-white font-normal pt-2 ">Hebel Mebel</h2>
+                <p class="lg:text-MyGray dark:text-MyLightGray max-w-[450px] leading-6 pt-4">
                     Tworzymy meble, które łączą w sobie tradycyjne rzemiosło, nowoczesny styl i Twoje indywidualne potrzeby, tak by idealnie wpasowały się w klimat i charakter Twojego domu.
                 </p>
+                <div class="mt-6">
+                <WriteButton client:load/>
+
+                </div>
                 <!-- <div/> -->
             </div>
         </div>
-            <Image loading={"eager"} decoding="sync" src={Bg} alt="Duży stół dębowy do jadalni" class="ml-auto h-[600px] w-auto object-cover  overflow-hidden hidden lg:flex"/>
+            <Image loading={"eager"} decoding="sync" src={Bg} alt="Duży stół dębowy do jadalni" class="ml-auto h-[630px] w-auto object-cover  overflow-hidden hidden lg:flex"/>
              
     </div>
 </section>

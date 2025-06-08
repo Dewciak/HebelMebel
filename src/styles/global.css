@@ -137,3 +137,9 @@ button {
 li:hover {
   color: var(--myBrown);
 }
+
+body.fullNavbar .navbar {
+  width: 100%;
+  margin-top: 0;
+  border-radius: 0;
+}
