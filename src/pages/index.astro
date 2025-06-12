@@ -26,12 +26,12 @@ import Navbar from "@/components/HomePage/Navbar.tsx";
 		<Navbar client:only="react" furniturePage={false} policyPrivacyPage={false} />
     <main class="snap-y dark:bg-MyDarkBg  ">
       <Hero />
-      <Realizations client:visible  />
+      <Realizations client:idle  />
       <!-- <WriteUs /> -->
 	    <AboutUs />
       <Quote />
       <Works />
-      <WoodTypes client:visible />
+      <WoodTypes client:idle />
       <Stages />
     </main>
       <Footer />

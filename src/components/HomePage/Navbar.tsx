@@ -77,7 +77,7 @@ const Navbar = ({furniturePage, policyPrivacyPage}: Props) => {
 
   return (
     <nav>
-      <div className='navbar w-[80%] left-[50%] duration-300 translate-x-[-50%] fixed bg-white rounded-[30px] mt-6 dark:bg-myDarkLighterDark z-[100] hidden xl:flex'>
+      <div className='navbar w-[80%] left-[50%] duration-300 translate-x-[-50%] fixed bg-white rounded-[30px] mt-6 dark:bg-myDarkLighterDark z-[10] hidden xl:flex'>
         <div
           className={`max-w-[2000px] mx-auto  py-2 flex w-[100%]  justify-between  
             px-10 items-center text-[#262626] font-extralight dark:text-white`}
@@ -113,10 +113,9 @@ const Navbar = ({furniturePage, policyPrivacyPage}: Props) => {
         </div>
       </div>
 
-      <div className='navbar fixed flex xl:hidden bg-white items-center w-full  dark:bg-myDarkLighterDark justify-between px-4 py-2 z-30'>
+      <div className='navbar navbar w-[90%] mt-4  rounded-[20px]  left-[50%] duration-300 translate-x-[-50%]  fixed flex xl:hidden bg-white items-center dark:bg-myDarkLighterDark justify-between px-4 py-2 z-30'>
         <a href='/' aria-label='Strona Główna'>
-          <img src='/images/Logo.webp' alt='Logo' className='size-[3.5rem] block dark:hidden' />
-          <img src='/LogoWhite.webp' alt='Logo' className='size-[3.5rem] hidden dark:block' />
+          <img src='/LogoColor.png' className='size-[4rem] block' alt='Logo' />
         </a>
 
         <HamburgerMenu aria-label='Menu Mobilne' />

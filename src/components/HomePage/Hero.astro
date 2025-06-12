@@ -2,6 +2,7 @@
 import { Image } from "astro:assets"
 import Bg from "public/images/Hero.webp"
 import WriteButton from "../WriteButton"
+import { ContactForm } from "../ContactForm"
 // import BgMobile from "public/images/Hero.webp"
 
 
@@ -15,14 +16,14 @@ import WriteButton from "../WriteButton"
         <div class=" flex flex-col justify-between items-start  ">
             <Image loading={"eager"} decoding="sync" src={Bg} alt="" class=" object-cover h-[490px] lg:hidden"/>
             <!-- Mobile background -->
-            <div class=" mt-8  lg:mt-10 flex flex-col z-10 justify-center items-center  h-[90%] w-full lg:h-auto lg:w-auto   lg:items-start lg:justify-start ">
+            <div class=" mt-8  lg:mt-10 flex flex-col z-5 justify-center items-center  h-[90%] w-full lg:h-auto lg:w-auto   lg:items-start lg:justify-start ">
                 <h1 class="text-lg  text-MyBrown font-normal" >STOLARSTWO BULOWICE</h1>
                 <h2 class=" lg:text-6xl text-6xl  lg:text-MyDarkBrown dark:text-white font-normal pt-2 ">Hebel Mebel</h2>
                 <p class="lg:text-MyGray dark:text-MyLightGray max-w-[450px] leading-6 pt-4">
                     Tworzymy meble, które łączą w sobie tradycyjne rzemiosło, nowoczesny styl i Twoje indywidualne potrzeby, tak by idealnie wpasowały się w klimat i charakter Twojego domu.
                 </p>
                 <div class="mt-6">
-                <WriteButton client:load/>
+                <ContactForm client:load/>
 
                 </div>
                 <!-- <div/> -->
