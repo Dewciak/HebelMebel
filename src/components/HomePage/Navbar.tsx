@@ -113,9 +113,9 @@ const Navbar = ({furniturePage, policyPrivacyPage}: Props) => {
         </div>
       </div>
 
-      <div className='navbar navbar w-[90%] mt-4  rounded-[20px]  left-[50%] duration-300 translate-x-[-50%]  fixed flex xl:hidden bg-white items-center dark:bg-myDarkLighterDark justify-between px-4 py-2 z-30'>
+      <div className='navbar navbar w-[90%] mt-4  rounded-[20px]  left-[50%] duration-300 translate-x-[-50%]  fixed flex xl:hidden bg-white items-center dark:bg-myDarkLighterDark justify-between px-8 py-2 z-30'>
         <a href='/' aria-label='Strona Główna'>
-          <img src='/LogoColor.png' className='size-[4rem] block' alt='Logo' />
+          <img src='/LogoColor.png' className='size-[3.5rem] block' alt='Logo' />
         </a>
 
         <HamburgerMenu aria-label='Menu Mobilne' />

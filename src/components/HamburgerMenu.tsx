@@ -15,7 +15,7 @@ const HamburgerMenu = () => {
           isMobileMenuOpen.set(!$isMobileMenuOpen);
         }}
       >
-        <Hamburger aria-label='mobile-menu' size={30} duration={0.3} toggled={$isMobileMenuOpen} />
+        <Hamburger aria-label='mobile-menu' size={29} duration={0.3} toggled={$isMobileMenuOpen} />
       </button>{" "}
       <button
         className='hamburgerMenu hidden dark:block'
@@ -24,7 +24,7 @@ const HamburgerMenu = () => {
           isMobileMenuOpen.set(!$isMobileMenuOpen);
         }}
       >
-        <Hamburger aria-label='mobile-menu' size={30} duration={0.3} color='#ffffff' toggled={$isMobileMenuOpen} />
+        <Hamburger aria-label='mobile-menu' size={29} duration={0.3} color='#ffffff' toggled={$isMobileMenuOpen} />
       </button>
     </div>
   );
