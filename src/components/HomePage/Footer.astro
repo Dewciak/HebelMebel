@@ -4,6 +4,9 @@ import { CiFacebook } from "react-icons/ci";
 import { PiPhoneThin } from "react-icons/pi";
 import {ContactForm} from "../ContactForm"
 
+
+const date = new Date 
+
 ---
 <footer id='Contact'>
     <div class="bg-MyLightGray dark:bg-myDarkLighterDark lg:mt-0 mt-0 dark:text-myDarkText">
@@ -40,8 +43,8 @@ import {ContactForm} from "../ContactForm"
                 </div>
                 
             </div>
-            <a href="https://wiktordawid.vercel.app/" target="blank" class="mt-6 flex justify-between px-4">
-                <h1>© Hebel Mebel 2025</h1>
+            <a href="https://wiktordawid.vercel.app/" target="blank" class="mt-6 flex justify-between px-4 flex-col lg:flex-row text-center lg:text-left">
+                <h1>© Hebel Mebel {date.getFullYear()}</h1>
                 <h1>Realizacja: Wiktor Dawid</h1>
             </a>
         </div>

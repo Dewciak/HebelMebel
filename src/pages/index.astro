@@ -19,13 +19,13 @@ import Navbar from "@/components/HomePage/Navbar.tsx";
     <link rel="icon" href="favicon.png" type="image/png">
     <title>Hebel Mebel- Meble na wymiar z litego drewna | Solidność i styl</title>
     <meta name="description" content="Meble z litego drewna na wymiar. Solidne, stylowe i trwałe meble do salonu, kuchni i sypialni. Ręczna produkcja, polski stolarz.">
-    <link rel="preload" as="font" href="/fonts/roboto-v48-latin/roboto-v48-latin-regular.woff2" />
+    <link rel="preload" as="font" href="/fonts/roboto-v48-latin/roboto-v48-latin-regular.woff2"  type="font/woff2"   crossorigin="anonymous"/>
 
   </head>
   <body>
 		<Navbar client:only="react" furniturePage={false} policyPrivacyPage={false} />
     <main class="snap-y dark:bg-MyDarkBg  ">
-      <Hero />
+      <Hero client:load/>
       <Realizations client:idle  />
       <!-- <WriteUs /> -->
 	    <AboutUs />
