@@ -5,7 +5,6 @@ import { PiPhoneThin } from "react-icons/pi";
 import {ContactForm} from "../ContactForm"
 
 
-const date = new Date 
 
 ---
 <footer id='Contact'>
@@ -30,12 +29,12 @@ const date = new Date
                         <PiPhoneThin size={30}/>
                         <h1>789 483 925</h1>
                     </div>
-                    <a href="https://www.facebook.com/people/Hebel-Mebel/61572405610929/" target="blank"  class="flex space-x-2 items-center justify-center">
+                    <a href="https://www.facebook.com/people/Hebel-Mebel/61572405610929/" target="_blank"  class="flex space-x-2 items-center justify-center">
                         <CiFacebook size={30}/>
                         <h1>hebelmebel</h1>
                     </a>
                     
-                    <a href="https://www.olx.pl/oferty/uzytkownik/148WWn/?tab=ratings" target="blank" class="flex space-x-2 items-center justify-center pt-1 lg:mt-0 relative dark:right-1">
+                    <a href="https://www.olx.pl/oferty/uzytkownik/148WWn/?tab=ratings" target="_blank" class="flex space-x-2 items-center justify-center pt-1 lg:mt-0 relative dark:right-1">
                         <img alt="olx" src="/Olx.svg" class="size-[28px] border border-black rounded-full px-1 block dark:hidden"/>
                         <img alt="olx" src="/OlxWhite.svg" class=" size-[28px] border dark:border-myDarkText rounded-full px-1 hidden dark:block"/>
                         <h1>hebelmebel</h1>
@@ -43,8 +42,8 @@ const date = new Date
                 </div>
                 
             </div>
-            <a href="https://wiktordawid.vercel.app/" target="blank" class="mt-6 flex justify-between px-4 flex-col lg:flex-row text-center lg:text-left">
-                <h1>© Hebel Mebel {date.getFullYear()}</h1>
+            <a href="https://wiktordawid.vercel.app/" target="_blank" class="mt-6 flex justify-between px-4 flex-col lg:flex-row text-center lg:text-left">
+                <h1>© Hebel Mebel {new Date().getFullYear()}</h1>
                 <h1>Realizacja: Wiktor Dawid</h1>
             </a>
         </div>
