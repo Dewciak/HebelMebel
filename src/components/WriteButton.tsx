@@ -57,7 +57,7 @@ const WriteButton = React.forwardRef<SVGSVGElement, React.ComponentProps<"svg">>
         y='32'
         textAnchor='middle'
         dominantBaseline='middle'
-        className='fill-black dark:fill-white'
+        className='fill-black dark:fill-white font-bold '
       >
         Napisz
       </motion.text>

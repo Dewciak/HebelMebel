@@ -8,7 +8,7 @@ const Logo = () => {
         <img src='/LogoColor.png' className='size-[4rem] block dark:hidden' alt='Logo' />
         <img src='/LogoColor.png' className='size-[4rem] hidden dark:block' alt='Logo' />
       </a>
-      <h1 className='pl-4 font-thin text-xl'>Hebel Mebel</h1>
+      <h1 className='pl-4 font-thin text-xl'>Stolarstwo Komendera</h1>
     </div>
   );
 };

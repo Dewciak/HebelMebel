@@ -85,7 +85,7 @@ const Navbar = ({furniturePage, policyPrivacyPage}: Props) => {
           <Logo />
 
           <ul
-            className={`flex text-[0.9rem] space-x-10 font-thin justify-between ${furniturePage === true ? "hidden" : ""}`}
+            className={`flex text-[0.9rem] space-x-10 font-normal justify-between ${furniturePage === true ? "hidden" : ""}`}
             id='navbar-links'
           >
             {sections.map((section, key) => (

@@ -8,7 +8,7 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  src: url("/fonts/roboto-v48-latin/roboto-v48-latin-regular.woff2") format("woff2");
+  src: url("public/fonts/Roboto-Regular.ttf") format("ttf");
 }
 /* roboto-500 - latin */
 @font-face {
@@ -16,7 +16,14 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
-  src: url("/fonts/roboto-v48-latin/roboto-v48-latin-500.woff2") format("woff2");
+  src: url("public/fonts/Roboto-SemiBold.ttf") format("ttf");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  src: url("public/fonts/Roboto-Bold.ttf") format("ttf");
 }
 
 @layer base {

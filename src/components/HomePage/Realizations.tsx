@@ -7,8 +7,8 @@ const Realizations = () => {
 
   return (
     <section id='Realizations'>
-      <div className='w-full'>
-        <div className='text-center xl:mt-28 mt-14'>
+      <div className='w-full mt-24'>
+        <div className='text-center xl:mt-0 mt-14'>
           <h2 className='text-4xl font-medium text-MyDarkBrown dark:text-myDarkText '>Nasze realizacje</h2>
         </div>
         <div className='mx-auto flex mt-20 overflow-hidden max-w-[1200px]  justify-center items-center '>
