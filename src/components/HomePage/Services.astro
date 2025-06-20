@@ -1,4 +1,8 @@
 ---
+import { Image } from "astro:assets";
+import Service1 from "/src/images/Service1.webp"
+import Service2 from "/src/images/Service2.webp"
+import Service3 from "/src/images/Service3.webp"
 ---
 <section
   id="services"
@@ -17,9 +21,9 @@
       class="mx-auto mb-6 flex size-24 items-center justify-center
              rounded-full bg-MyBrown dark:bg-MyBrown"
     >
-      <img
-        src="public/images/Service1.webp"
-        alt="appliance"
+      <Image
+        src={Service1}
+        alt={"Konsultacje"}
         width="48"
         height="48"
         class="h-12 w-12"
@@ -45,9 +49,9 @@
       class="mx-auto mb-6 flex size-24 items-center justify-center
              rounded-full bg-MyBrown dark:bg-MyBrown"
     >
-      <img
-        src="public/images/Service2.webp"
-        alt="appliance"
+      <Image
+        src={Service2}
+        alt="Projekt"
         width="48"
         height="48"
         class="h-12 w-12"
@@ -72,9 +76,9 @@
       class="mx-auto mb-6 flex size-24 items-center justify-center
              rounded-full bg-MyBrown dark:bg-MyBrown"
     >
-      <img
-        src="public/images/Service3.webp"
-        alt="appliance"
+      <Image
+        src={Service3}
+        alt="Wykonanie"
         width="48"
         height="48"
         class="h-12 w-12"
