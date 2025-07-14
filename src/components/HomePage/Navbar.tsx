@@ -77,7 +77,7 @@ const Navbar = ({furniturePage, policyPrivacyPage}: Props) => {
 
   return (
     <nav>
-      <div className='navbar w-[80%] left-[50%] duration-300 translate-x-[-50%] fixed bg-white rounded-[30px] mt-6 dark:bg-myDarkLighterDark z-[10] hidden xl:flex'>
+      <div className='navbar w-[100%] left-[50%] duration-300 translate-x-[-50%] fixed bg-white rounded-[30px] mt-0 dark:bg-myDarkLighterDark z-[10] hidden xl:flex'>
         <div
           className={`max-w-[2000px] mx-auto  py-2 flex w-[100%]  justify-between  
             px-10 items-center text-[#262626] font-extralight dark:text-white`}
@@ -108,8 +108,10 @@ const Navbar = ({furniturePage, policyPrivacyPage}: Props) => {
                 )}
               </li>
             ))}
+            <li>
+              <DarkThemeToggle isDarkMode={isDarkMode} handleToggle={handleToggle} />
+            </li>
           </ul>
-          <DarkThemeToggle isDarkMode={isDarkMode} handleToggle={handleToggle} />
         </div>
       </div>
 
